@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pardo · Maison de Parfums | Alta perfumería multimarca</title>
+<meta name="description" content="Perfumería multimarca de lujo. Fragancias originales para él y para ella: Chanel, Dior, Versace, Prada, YSL y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#c8a45d;--gold2:#e9d4a0;--bg:#0a0a0a;--bg2:#121212;--txt:#ece6da;--mute:#8d877c}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:300}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.eyebrow{font-size:.68rem;letter-spacing:.45em;text-transform:uppercase;color:var(--gold)}
+.gold-line{display:block;width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto}
+
+/* Preloader */
+#loader{position:fixed;inset:0;background:var(--bg);z-index:100;display:grid;place-items:center;transition:opacity 1s .2s,visibility 1s .2s}
+#loader.hide{opacity:0;visibility:hidden}
+#loader .mono{font-family:'Cormorant Garamond';font-size:4rem;color:var(--gold);letter-spacing:.2em;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:28px 6%;transition:.5s}
+nav.solid{background:#0a0a0af2;padding:16px 6%;border-bottom:1px solid #c8a45d22;backdrop-filter:blur(8px)}
+.brand{text-align:center;line-height:1}
+.brand b{font-family:'Cormorant Garamond';font-weight:400;font-size:1.9rem;letter-spacing:.35em;color:var(--gold)}
+.brand small{display:block;font-size:.55rem;letter-spacing:.6em;margin-top:6px;color:var(--mute)}
+nav ul{display:flex;gap:36px;list-style:none;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase}
+nav ul a{position:relative;padding-bottom:4px}
+nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:.4s}
+nav ul a:hover::after{width:100%}
+.btn{display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:15px 40px;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;position:relative;overflow:hidden;transition:color .5s;z-index:0;cursor:pointer;background:none;font-family:inherit}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s;z-index:-1}
+.btn:hover{color:#000}.btn:hover::before{transform:scaleX(1);transform-origin:left}
+
+/* Hero slider */
+.hero{height:100vh;min-height:640px;position:relative;overflow:hidden;display:grid;place-items:center;text-align:center}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 8s ease-out}
+.slide.on img{transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,#0a0a0a66 0,#0a0a0ae6 75%)}
+.hero-c{position:relative;z-index:2;padding:0 6%}
+.hero h1{font-size:clamp(3.2rem,8vw,7.5rem);line-height:1;margin:22px 0}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero p{max-width:540px;margin:0 auto 40px;color:#d8d2c6}
+.dots{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:14px}
+.dots button{width:40px;height:2px;border:0;background:#ffffff44;cursor:pointer;transition:.4s}
+.dots button.on{background:var(--gold);width:70px}
+.scroll{position:absolute;right:6%;bottom:44px;z-index:3;font-size:.6rem;letter-spacing:.4em;writing-mode:vertical-rl;color:var(--mute)}
+.scroll::after{content:"";display:block;width:1px;height:60px;background:var(--gold);margin:12px auto 0;animation:drop 2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Marquee */
+.brands{border-top:1px solid #c8a45d33;border-bottom:1px solid #c8a45d33;padding:30px 0;overflow:hidden;white-space:nowrap;background:var(--bg2)}
+.brands div{display:inline-block;animation:mq 40s linear infinite}
+.brands span{font-family:'Cormorant Garamond';font-size:1.9rem;letter-spacing:.25em;margin:0 40px;color:#b9b2a5}
+.brands span i{color:var(--gold);font-style:normal;margin-left:80px;font-size:1rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:130px 6%}
+.head{text-align:center;margin-bottom:70px}
+.head h2{font-size:clamp(2.4rem,5vw,4rem);line-height:1.1;margin-top:14px}
+.head h2 em{color:var(--gold);font-style:italic}
+
+/* Él / Ella split */
+.split{display:flex;height:80vh;min-height:520px;gap:2px;padding:0}
+.side{flex:1;position:relative;overflow:hidden;transition:flex 1s cubic-bezier(.7,0,.2,1);cursor:pointer}
+.side:hover{flex:1.8}
+.side img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s,filter 1s;filter:grayscale(.5) brightness(.6)}
+.side:hover img{transform:scale(1.06);filter:grayscale(0) brightness(.75)}
+.side .lbl{position:absolute;left:10%;bottom:12%;z-index:2}
+.side .lbl h3{font-size:clamp(3rem,7vw,6rem);line-height:1}
+.side .lbl p{max-width:340px;opacity:0;transform:translateY(20px);transition:.8s .2s;margin:10px 0 24px}
+.side:hover .lbl p{opacity:1;transform:none}
+
+/* Productos */
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:50px;flex-wrap:wrap}
+.tabs button{background:none;border:1px solid #333;color:var(--mute);padding:10px 26px;font:inherit;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;cursor:pointer;transition:.4s}
+.tabs button.on,.tabs button:hover{border-color:var(--gold);color:var(--gold)}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:34px}
+.prod{background:var(--bg2);transition:transform .6s,opacity .5s;border:1px solid #1d1d1d}
+.prod.hide{display:none}
+.prod:hover{transform:translateY(-10px);border-color:#c8a45d55}
+.prod .ph{aspect-ratio:4/5;overflow:hidden;position:relative}
+.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.prod:hover .ph img{transform:scale(1.08)}
+.prod .tag{position:absolute;top:16px;left:16px;font-size:.58rem;letter-spacing:.3em;background:#0a0a0acc;color:var(--gold);padding:6px 12px;text-transform:uppercase}
+.prod .info{padding:26px}
+.prod .house{font-size:.62rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase}
+.prod h4{font-size:1.7rem;line-height:1.2;margin:6px 0}
+.prod p{font-size:.8rem;color:var(--mute)}
+.prod a{display:inline-block;margin-top:16px;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid var(--gold);padding-bottom:3px;color:var(--gold2)}
+
+/* Experiencia parallax */
+.exp{position:relative;padding:180px 6%;text-align:center;background:url('../../assets/img/tienda.jpg') center/cover fixed}
+.exp::before{content:"";position:absolute;inset:0;background:#0a0a0ad0}
+.exp>*{position:relative}
+.exp h2{font-size:clamp(2.4rem,5vw,4.2rem);max-width:900px;margin:16px auto 20px;line-height:1.15}
+.exp p{max-width:620px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1000px;margin:70px auto 0}
+.stats b{display:block;font-family:'Cormorant Garamond';font-weight:300;font-size:3.6rem;color:var(--gold);line-height:1}
+.stats span{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+
+/* Servicios */
+.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#c8a45d33;border:1px solid #c8a45d33}
+.serv div{background:var(--bg);padding:60px 44px;transition:.5s}
+.serv div:hover{background:var(--bg2)}
+.serv .n{font-family:'Cormorant Garamond';font-size:3rem;color:var(--gold);font-style:italic}
+.serv h3{font-size:1.8rem;margin:10px 0}
+.serv p{font-size:.85rem;color:var(--mute)}
+
+/* Testimonios */
+.testi{text-align:center;max-width:900px;margin:auto;position:relative;min-height:240px}
+.q{position:absolute;inset:0;opacity:0;transition:opacity 1s}
+.q.on{opacity:1;position:relative}
+.q p{font-family:'Cormorant Garamond';font-size:clamp(1.6rem,3vw,2.4rem);font-style:italic;line-height:1.5}
+.q span{display:block;margin-top:24px;font-size:.65rem;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;background:var(--bg2)}
+.contact .img{min-height:600px;background:url('../../assets/img/coco-noir.jpg') center/cover}
+.contact .f{padding:100px 10%}
+.contact h2{font-size:3rem;line-height:1.1;margin:14px 0 30px}
+form{display:grid;gap:22px}
+input,select,textarea{background:transparent;border:0;border-bottom:1px solid #333;color:var(--txt);padding:14px 0;font:inherit;font-size:.9rem}
+select option{background:#111}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--gold)}
+.ok{color:var(--gold);font-size:.85rem;min-height:1.4em}
+
+footer{padding:70px 6% 40px;text-align:center;border-top:1px solid #c8a45d22}
+footer .brand{margin-bottom:30px}
+footer ul{display:flex;justify-content:center;gap:30px;list-style:none;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-bottom:30px;flex-wrap:wrap}
+footer small{font-size:.65rem;color:#555;letter-spacing:.15em}
+
+.wa{position:fixed;right:26px;bottom:26px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--gold);display:grid;place-items:center;box-shadow:0 10px 30px #0008;transition:.4s}
+.wa:hover{transform:scale(1.1)}
+
+.rv{opacity:0;transform:translateY(50px);transition:opacity 1.2s,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:900px){nav ul{display:none}.split{flex-direction:column;height:auto}.side{height:60vh}.side .lbl p{opacity:1;transform:none}.stats{grid-template-columns:repeat(2,1fr)}.serv{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.contact .img{min-height:340px}.exp{background-attachment:scroll}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="loader" aria-hidden="true"><div class="mono">P</div></div>
+
+<nav id="nav">
+<ul><li><a href="#ella-el">Ella & Él</a></li><li><a href="#coleccion">Colección</a></li></ul>
+<a class="brand" href="#"><b>PARDO</b><small>MAISON DE PARFUMS</small></a>
+<ul><li><a href="#casa">La Casa</a></li><li><a href="#contacto">Contacto</a></li></ul>
+</nav>
+
+<header class="hero">
+<div class="slide on"><img src="../../assets/img/prada.jpg" alt="Frasco de perfume Prada sobre fondo negro"></div>
+<div class="slide"><img src="../../assets/img/coco-noir.jpg" alt="Coco Noir de Chanel con flores rojas"></div>
+<div class="slide"><img src="../../assets/img/humo.jpg" alt="Frasco de perfume entre humo"></div>
+<div class="hero-c">
+<div class="eyebrow">Alta perfumería multimarca</div>
+<h1>La firma que <em>te recuerda</em></h1>
+<p>Las casas más prestigiosas del mundo reunidas en un solo lugar. Fragancias 100% originales, seleccionadas para quien no se conforma con lo común.</p>
+<a class="btn" href="#coleccion">Explorar la colección</a>
+</div>
+<div class="dots" id="dots"></div>
+<div class="scroll">SCROLL</div>
+</header>
+
+<div class="brands" aria-label="Marcas disponibles"><div>
+<span>CHANEL<i>◆</i></span><span>DIOR<i>◆</i></span><span>VERSACE<i>◆</i></span><span>PRADA<i>◆</i></span><span>YVES SAINT LAURENT<i>◆</i></span><span>GIORGIO ARMANI<i>◆</i></span><span>DOLCE & GABBANA<i>◆</i></span><span>HUGO BOSS<i>◆</i></span><span>TOM FORD<i>◆</i></span><span>CAROLINA HERRERA<i>◆</i></span>
+<span>CHANEL<i>◆</i></span><span>DIOR<i>◆</i></span><span>VERSACE<i>◆</i></span><span>PRADA<i>◆</i></span><span>YVES SAINT LAURENT<i>◆</i></span><span>GIORGIO ARMANI<i>◆</i></span><span>DOLCE & GABBANA<i>◆</i></span><span>HUGO BOSS<i>◆</i></span><span>TOM FORD<i>◆</i></span><span>CAROLINA HERRERA<i>◆</i></span>
+</div></div>
+
+<section id="ella-el" style="padding-bottom:0">
+<div class="head rv"><div class="eyebrow">Dos universos</div><h2>Para ella. <em>Para él.</em></h2><span class="gold-line"></span></div>
+</section>
+<div class="split rv">
+<div class="side" onclick="filterTo('ella')"><img src="../../assets/img/coco-mademoiselle.jpg" alt="Perfume femenino rodeado de rosas"><div class="lbl"><div class="eyebrow">Colección</div><h3>Ella</h3><p>Florales, orientales y chypres que celebran la elegancia femenina en todas sus formas.</p><span class="btn">Descubrir</span></div></div>
+<div class="side" onclick="filterTo('el')"><img src="../../assets/img/bleu-chanel.jpg" alt="Perfume masculino en frasco azul"><div class="lbl"><div class="eyebrow">Colección</div><h3>Él</h3><p>Maderas, especias y frescura mediterránea para el hombre que define su propio estilo.</p><span class="btn">Descubrir</span></div></div>
+</div>
+
+<section id="coleccion">
+<div class="head rv"><div class="eyebrow">Selección de la casa</div><h2>Fragancias <em>icónicas</em></h2><span class="gold-line"></span></div>
+<div class="tabs rv" role="tablist">
+<button class="on" data-f="all">Todas</button><button data-f="ella">Ella</button><button data-f="el">Él</button>
+</div>
+<div class="products" id="products"></div>
+</section>
+
+<section class="exp" id="casa">
+<div class="eyebrow rv">La Casa Pardo</div>
+<h2 class="rv">Más que una tienda, una experiencia sensorial a tu medida</h2>
+<p class="rv">Asesoría personalizada, pruebas sobre piel y una curaduría de fragancias que solo encontrarás aquí. Porque elegir un perfume es elegir cómo quieres ser recordado.</p>
+<div class="stats">
+<div class="rv"><b data-n="25">0</b><span>Casas de lujo</span></div>
+<div class="rv"><b data-n="400">0</b><span>Fragancias</span></div>
+<div class="rv"><b data-n="100">0</b><span>% Originales</span></div>
+<div class="rv"><b data-n="15">0</b><span>Años de trayectoria</span></div>
+</div>
+</section>
+
+<section>
+<div class="head rv"><div class="eyebrow">Servicios exclusivos</div><h2>El arte de <em>atenderte</em></h2><span class="gold-line"></span></div>
+<div class="serv rv">
+<div><div class="n">I.</div><h3>Asesoría olfativa</h3><p>Descubrimos juntos tu firma aromática según tu piel, tu personalidad y la ocasión.</p></div>
+<div><div class="n">II.</div><h3>Empaque de regalo</h3><p>Presentación de lujo con tarjeta personalizada. El detalle perfecto para impresionar.</p></div>
+<div><div class="n">III.</div><h3>Entrega privada</h3><p>Llevamos tu fragancia hasta tu puerta con la discreción y el cuidado que merece.</p></div>
+</div>
+</section>
+
+<section style="padding-top:40px">
+<div class="testi rv" id="testi">
+<div class="q on"><p>“Encontré mi perfume de toda la vida gracias a su asesoría. Atención impecable, como en las boutiques de París.”</p><span>Andrés M.</span></div>
+<div class="q"><p>“Cada regalo que compro aquí sorprende. El empaque y la autenticidad hacen la diferencia.”</p><span>Valentina R.</span></div>
+<div class="q"><p>“La mejor selección de fragancias masculinas de la ciudad. Ya no compro en otro lugar.”</p><span>Carlos D.</span></div>
+</div>
+</section>
+
+<div class="contact" id="contacto">
+<div class="img" role="img" aria-label="Perfume Coco Noir con flores rojas"></div>
+<div class="f">
+<div class="eyebrow">Cita privada</div>
+<h2>Reserva tu asesoría personalizada</h2>
+<form id="form">
+<label class="sr" for="n" hidden>Nombre</label><input id="n" placeholder="Nombre completo" required>
+<label for="t" hidden>Teléfono</label><input id="t" type="tel" placeholder="Teléfono / WhatsApp" required>
+<label for="s" hidden>Interés</label><select id="s"><option>Fragancia para mí</option><option>Fragancia para regalo</option><option>Asesoría olfativa</option></select>
+<label for="m" hidden>Mensaje</label><textarea id="m" rows="2" placeholder="¿Qué aromas te gustan?"></textarea>
+<button class="btn" type="submit">Enviar por WhatsApp</button>
+<div class="ok" id="ok" role="status"></div>
+</form>
+</div>
+</div>
+
+<footer>
+<div class="brand"><b>PARDO</b><small>MAISON DE PARFUMS</small></div>
+<ul><li>Instagram</li><li>Facebook</li><li>TikTok</li><li>Lun–Sáb · 10:00–20:00</li></ul>
+<small>© 2026 Pardo Maison de Parfums · Todas las marcas mencionadas pertenecen a sus respectivos propietarios.</small>
+</footer>
+
+<a class="wa" id="wa" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#0a0a0a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+const WA='573000000000'; // ← Reemplazar con el número de WhatsApp de la tienda
+const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+document.getElementById('wa').href=wa('Hola, quiero información sobre sus perfumes.');
+
+const P=[
+['ella','Chanel','N°5 Eau de Parfum','Aldehídos, rosa de mayo, jazmín y sándalo','chanel-n5','Icono'],
+['el','Chanel','Bleu de Chanel','Cítricos, incienso, cedro y sándalo','bleu-chanel','Best seller'],
+['ella','Yves Saint Laurent','Black Opium','Café, vainilla y flores blancas','black-opium','Noche'],
+['el','Versace','Eros','Menta, manzana verde, haba tonka y vainilla','versace-eros','Intenso'],
+['ella','Chanel','Coco Mademoiselle','Naranja, rosa, pachulí y almizcle','coco-rosa','Clásico'],
+['el','Prada','Luna Rossa Black','Bergamota, pachulí, ámbar y cumarina','prada','Seductor'],
+['ella','Narciso Rodriguez','For Her','Almizcle, rosa y ámbar','narciso','Sensual'],
+['el','Giorgio Armani','Acqua di Giò','Notas marinas, bergamota y romero','acqua-di-gio','Fresco']
+];
+const box=document.getElementById('products');
+box.innerHTML=P.map(p=>`<article class="prod rv" data-g="${p[0]}"><div class="ph"><img loading="lazy" src="../../assets/img/${p[4]}.jpg" alt="${p[1]} ${p[2]}"><span class="tag">${p[5]}</span></div><div class="info"><div class="house">${p[1]}</div><h4>${p[2]}</h4><p>${p[3]}</p><a href="${wa('Hola, me interesa '+p[1]+' '+p[2]+'. ¿Está disponible?')}" target="_blank" rel="noopener">Consultar disponibilidad</a></div></article>`).join('');
+
+const tabs=document.querySelectorAll('.tabs button');
+function setFilter(f){tabs.forEach(t=>t.classList.toggle('on',t.dataset.f===f));document.querySelectorAll('.prod').forEach(p=>p.classList.toggle('hide',f!=='all'&&p.dataset.g!==f))}
+tabs.forEach(t=>t.onclick=()=>setFilter(t.dataset.f));
+function filterTo(f){setFilter(f);document.getElementById('coleccion').scrollIntoView()}
+
+// Slider
+const slides=document.querySelectorAll('.slide'),dots=document.getElementById('dots');let cur=0,timer;
+slides.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Imagen '+(i+1));b.onclick=()=>go(i);dots.appendChild(b)});
+function go(i){slides[cur].classList.remove('on');dots.children[cur].classList.remove('on');cur=i;slides[cur].classList.add('on');dots.children[cur].classList.add('on');clearInterval(timer);timer=setInterval(()=>go((cur+1)%slides.length),6500)}
+go(0);
+
+// Testimonios
+const qs=document.querySelectorAll('.q');let qi=0;setInterval(()=>{qs[qi].classList.remove('on');qi=(qi+1)%qs.length;qs[qi].classList.add('on')},5500);
+
+// Nav + reveal + counters
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>60));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add('in');const b=e.target.querySelector('[data-n]');if(b){const n=+b.dataset.n;let k=0;const s=setInterval(()=>{k+=Math.ceil(n/60);if(k>=n){k=n;clearInterval(s)}b.textContent=k+(n===100?'':'+')},25)}io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+document.getElementById('form').onsubmit=e=>{e.preventDefault();const t=`Hola, soy ${n.value}. Tel: ${document.getElementById('t').value}. Interés: ${s.value}. ${m.value}`;window.open(wa(t),'_blank');document.getElementById('ok').textContent='Gracias. Te atenderemos en breve.';e.target.reset()};
+addEventListener('load',()=>document.getElementById('loader').classList.add('hide'));
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pardo Private · Fragrance Club | Perfumería exclusiva</title>
+<meta name="description" content="Club privado de alta perfumería multimarca. Acceso anticipado, asesoría y fragancias originales de las mejores casas del mundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--night:#070b16;--navy:#0d1528;--champ:#d9c29a;--champ2:#f3e6c9;--txt:#dfe3ec;--mute:#8590a6;--glass:#ffffff0d;--gb:#ffffff1f}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--txt);font-family:'Manrope',sans-serif;font-weight:300;line-height:1.75;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Marcellus',serif;font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.kick{font-size:.68rem;letter-spacing:.4em;text-transform:uppercase;color:var(--champ)}
+.grad{background:linear-gradient(100deg,var(--champ2),var(--champ) 40%,#a88b5c 70%,var(--champ2));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200%;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+
+/* Glow cursor */
+#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#d9c29a1f,transparent 65%);transform:translate(-50%,-50%);z-index:0;transition:opacity .4s}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);z-index:0;opacity:.55;pointer-events:none}
+.o1{width:500px;height:500px;background:#1b2f6b;top:-150px;right:-120px}
+.o2{width:420px;height:420px;background:#3b2a12;bottom:-160px;left:-120px}
+main,nav,footer{position:relative;z-index:1}
+
+nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);width:min(1180px,92%);display:flex;justify-content:space-between;align-items:center;padding:14px 26px;border-radius:999px;background:#0d152899;border:1px solid var(--gb);backdrop-filter:blur(16px);z-index:30}
+.logo{font-family:'Marcellus';font-size:1.25rem;letter-spacing:.3em}
+.logo span{color:var(--champ)}
+nav ul{display:flex;gap:30px;list-style:none;font-size:.78rem;color:var(--mute)}
+nav ul a:hover{color:var(--champ2)}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:12px 26px;border-radius:999px;background:linear-gradient(135deg,var(--champ2),var(--champ));color:#111;font-weight:600;font-size:.78rem;letter-spacing:.08em;border:0;cursor:pointer;transition:transform .3s,box-shadow .3s;font-family:inherit}
+.pill:hover{transform:translateY(-2px);box-shadow:0 10px 30px #d9c29a44}
+.ghost{background:transparent;color:var(--champ2);border:1px solid #d9c29a66}
+
+/* Hero con tarjetas flotantes */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:140px 6% 80px;max-width:1400px;margin:auto}
+.hero h1{font-size:clamp(3rem,6.4vw,6rem);line-height:1.02;margin:20px 0 26px}
+.hero p{max-width:480px;color:#b9c0cf;margin-bottom:36px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;gap:34px;margin-top:50px}
+.trust b{font-family:'Marcellus';font-size:1.8rem;color:var(--champ2);display:block;font-weight:400}
+.trust span{font-size:.72rem;color:var(--mute)}
+.stage{position:relative;height:620px}
+.card{position:absolute;border-radius:24px;overflow:hidden;border:1px solid var(--gb);box-shadow:0 40px 80px #000a;transition:transform .2s ease-out}
+.card .lb{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 16px;border-radius:14px;background:#070b16aa;backdrop-filter:blur(10px);border:1px solid var(--gb);font-size:.75rem}
+.card .lb b{display:block;font-family:'Marcellus';font-weight:400;font-size:1rem;color:var(--champ2)}
+.c1{width:56%;height:78%;left:22%;top:8%;z-index:2}
+.c2{width:38%;height:46%;left:0;top:44%;z-index:3}
+.c3{width:36%;height:42%;right:0;top:0;z-index:1}
+
+/* Secciones */
+section{padding:130px 6%;max-width:1400px;margin:auto}
+.head{text-align:center;max-width:760px;margin:0 auto 70px}
+.head h2{font-size:clamp(2.4rem,4.6vw,4rem);line-height:1.1;margin:16px 0}
+.head p{color:var(--mute)}
+
+/* Toggle Ella/Él */
+.switch{display:inline-flex;padding:6px;border-radius:999px;background:var(--glass);border:1px solid var(--gb);margin:0 auto 60px;position:relative}
+.switch button{position:relative;z-index:2;background:none;border:0;color:var(--mute);font:inherit;font-weight:500;padding:12px 40px;cursor:pointer;transition:color .4s;letter-spacing:.15em;text-transform:uppercase;font-size:.75rem}
+.switch button.on{color:#111}
+.switch .knob{position:absolute;top:6px;bottom:6px;left:6px;width:calc(50% - 6px);border-radius:999px;background:linear-gradient(135deg,var(--champ2),var(--champ));transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.switch.el .knob{transform:translateX(100%)}
+.center{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.p{border-radius:22px;overflow:hidden;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(10px);transition:transform .5s,border-color .5s,opacity .5s}
+.p:hover{transform:translateY(-8px);border-color:#d9c29a66}
+.p .ph{aspect-ratio:1;overflow:hidden}
+.p .ph img{transition:transform 1.2s}
+.p:hover .ph img{transform:scale(1.08)}
+.p .in{padding:22px}
+.p small{font-size:.65rem;letter-spacing:.3em;color:var(--champ);text-transform:uppercase}
+.p h4{font-size:1.35rem;margin:4px 0}
+.p p{font-size:.8rem;color:var(--mute);min-height:2.6em}
+.p a{display:inline-block;margin-top:12px;font-size:.75rem;color:var(--champ2);border-bottom:1px solid #d9c29a66}
+.fade{opacity:0;transform:translateY(16px)}
+
+/* Membresías */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch}
+.tier{border-radius:28px;padding:44px 36px;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(14px);display:flex;flex-direction:column;transition:transform .5s}
+.tier:hover{transform:translateY(-8px)}
+.tier.feat{background:linear-gradient(160deg,#d9c29a26,#ffffff08);border-color:#d9c29a88;position:relative}
+.tier.feat::before{content:"Más elegido";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--champ);color:#111;font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:5px 16px;border-radius:99px}
+.tier h3{font-size:2rem}
+.tier .sub{color:var(--mute);font-size:.85rem;margin-bottom:26px}
+.tier ul{list-style:none;flex:1;margin-bottom:30px}
+.tier li{padding:12px 0;border-bottom:1px solid var(--gb);font-size:.88rem;display:flex;gap:12px}
+.tier li::before{content:"✦";color:var(--champ)}
+
+/* Ritual */
+.ritual{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.ritual .img{border-radius:30px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--gb)}
+.steps{counter-reset:s}
+.step{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid var(--gb)}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:'Marcellus';font-size:2.2rem;color:var(--champ)}
+.step h4{font-size:1.4rem}
+.step p{color:var(--mute);font-size:.9rem}
+
+/* Banner */
+.banner{position:relative;border-radius:36px;overflow:hidden;min-height:440px;display:grid;place-items:center;text-align:center;margin:0 6% 120px}
+.banner img{position:absolute;inset:0;transform:scale(1.2)}
+.banner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#070b16aa,#070b16ee)}
+.banner .c{position:relative;z-index:2;padding:60px 6%;max-width:760px}
+.banner h2{font-size:clamp(2.2rem,4.4vw,3.8rem);line-height:1.1;margin:16px 0 28px}
+form{display:flex;gap:10px;max-width:520px;margin:auto;padding:6px;border-radius:999px;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(10px)}
+form input{flex:1;background:none;border:0;color:var(--txt);padding:0 20px;font:inherit;min-width:0}
+form input:focus{outline:0}
+#ok{margin-top:14px;color:var(--champ);font-size:.85rem;min-height:1.4em}
+
+footer{border-top:1px solid var(--gb);padding:50px 6%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-size:.78rem;color:var(--mute);max-width:1400px;margin:auto}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1000px){nav ul{display:none}.hero{grid-template-columns:1fr;padding-top:130px}.stage{height:480px}.grid{grid-template-columns:repeat(2,1fr)}.tiers,.ritual{grid-template-columns:1fr}#glow{display:none}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.switch button{padding:12px 26px}form{flex-direction:column;border-radius:24px}form input{padding:14px 20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="glow" aria-hidden="true"></div>
+<div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>
+
+<nav>
+<a class="logo" href="#">PARDO<span>·</span>PRIVATE</a>
+<ul><li><a href="#coleccion">Colección</a></li><li><a href="#club">Membresía</a></li><li><a href="#ritual">Ritual</a></li></ul>
+<a class="pill" href="#acceso">Acceso privado</a>
+</nav>
+
+<main>
+<header class="hero">
+<div>
+<div class="kick rv">Fragrance Club · Por invitación</div>
+<h1 class="rv">Lo exclusivo <span class="grad">no se exhibe.</span> Se descubre.</h1>
+<p class="rv">Un club privado de alta perfumería multimarca. Lanzamientos anticipados, ediciones limitadas y un asesor personal para ella y para él.</p>
+<div class="btns rv"><a class="pill" href="#acceso">Solicitar membresía →</a><a class="pill ghost" href="#coleccion">Ver colección</a></div>
+<div class="trust rv"><div><b>+30</b><span>Casas de lujo</span></div><div><b>100%</b><span>Originales</span></div><div><b>24h</b><span>Entrega privada</span></div></div>
+</div>
+<div class="stage" id="stage" aria-hidden="true">
+<div class="card c1" data-d="18"><img src="../../assets/img/versace-eros.jpg" alt=""><div class="lb"><b>Versace Eros</b>Menta · Tonka · Vainilla</div></div>
+<div class="card c2" data-d="34"><img src="../../assets/img/black-opium.jpg" alt=""><div class="lb"><b>Black Opium</b>YSL · Ella</div></div>
+<div class="card c3" data-d="10"><img src="../../assets/img/the-one.jpg" alt=""><div class="lb"><b>The One</b>Dolce & Gabbana</div></div>
+</div>
+</header>
+
+<section id="coleccion">
+<div class="head rv"><div class="kick">Colección del club</div><h2>Elige tu <span class="grad">universo</span></h2><p>Una selección rotativa de las fragancias más deseadas, disponible primero para miembros.</p></div>
+<div class="center rv"><div class="switch" id="sw" role="tablist"><span class="knob"></span><button class="on" data-g="ella" role="tab">Ella</button><button data-g="el" role="tab">Él</button></div></div>
+<div class="grid" id="grid"></div>
+</section>
+
+<section id="club">
+<div class="head rv"><div class="kick">Membresía</div><h2>Tres niveles de <span class="grad">privilegio</span></h2><p>Sin costos ocultos. Solo beneficios pensados para quienes viven la perfumería en serio.</p></div>
+<div class="tiers">
+<div class="tier rv"><span class="kick">Nivel I</span><h3>Silver</h3><p class="sub">Para empezar tu colección.</p><ul><li>Acceso a preventas</li><li>Muestras de lanzamientos</li><li>Asesoría por WhatsApp</li></ul><a class="pill ghost" href="#acceso">Unirme</a></div>
+<div class="tier feat rv"><span class="kick">Nivel II</span><h3>Gold</h3><p class="sub">El equilibrio perfecto.</p><ul><li>Todo lo de Silver</li><li>Descuento exclusivo permanente</li><li>Empaque de regalo de lujo</li><li>Entrega prioritaria</li></ul><a class="pill" href="#acceso">Unirme</a></div>
+<div class="tier rv"><span class="kick">Nivel III</span><h3>Black</h3><p class="sub">Para coleccionistas.</p><ul><li>Todo lo de Gold</li><li>Asesor personal dedicado</li><li>Ediciones limitadas reservadas</li><li>Eventos privados de lanzamiento</li></ul><a class="pill ghost" href="#acceso">Unirme</a></div>
+</div>
+</section>
+
+<section id="ritual">
+<div class="ritual">
+<div class="img rv"><img loading="lazy" src="../../assets/img/muneca.jpg" alt="Mujer aplicando perfume en la muñeca"></div>
+<div>
+<div class="kick rv">El ritual Pardo</div>
+<h2 class="rv" style="font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.1;margin:16px 0 20px">Cómo encontramos tu <span class="grad">firma</span></h2>
+<div class="steps">
+<div class="step rv"><div><h4>Conversación</h4><p>Conocemos tu estilo, tus recuerdos y los aromas que te definen.</p></div></div>
+<div class="step rv"><div><h4>Prueba sobre piel</h4><p>Cada fragancia evoluciona distinto en cada persona. La probamos en ti.</p></div></div>
+<div class="step rv"><div><h4>Elección consciente</h4><p>Te proponemos dos o tres opciones para el día, la noche y ocasiones especiales.</p></div></div>
+<div class="step rv"><div><h4>Seguimiento</h4><p>Tu asesor te avisa de lanzamientos afines a tu perfil olfativo.</p></div></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<div class="banner rv" id="acceso">
+<img id="bimg" src="../../assets/img/humo.jpg" alt="" loading="lazy">
+<div class="c"><div class="kick">Acceso privado</div><h2>Tu lugar en el club <span class="grad">te espera</span></h2>
+<form id="form"><label for="ph" hidden>WhatsApp</label><input id="ph" type="tel" placeholder="Tu número de WhatsApp" required><button class="pill" type="submit">Solicitar</button></form>
+<div id="ok" role="status"></div></div>
+</div>
+
+<footer><span class="logo" style="color:var(--txt)">PARDO<span>·</span>PRIVATE</span><span>Instagram · Facebook · TikTok</span><span>© 2026 · Las marcas pertenecen a sus propietarios</span></footer>
+
+<script>
+const WA='573000000000'; // ← Reemplazar con el número de WhatsApp de la tienda
+const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+const D={
+ella:[['Chanel','N°5','Aldehídos, rosa y sándalo','chanel-n5'],['YSL','Black Opium','Café, vainilla y flores blancas','black-opium'],['Chanel','Coco Mademoiselle','Naranja, rosa y pachulí','coco-mademoiselle'],['Escada','Especially','Pera, rosa y almizcle','escada']],
+el:[['Versace','Eros','Menta, manzana y tonka','versace-eros'],['Prada','Luna Rossa Black','Bergamota, pachulí y ámbar','prada'],['Hugo Boss','Boss Bottled','Manzana, canela y maderas','boss'],['Chanel','Bleu de Chanel','Cítricos, incienso y cedro','bleu-chanel']]
+};
+const grid=document.getElementById('grid'),sw=document.getElementById('sw');
+function render(g){grid.innerHTML=D[g].map((p,i)=>`<article class="p fade" style="transition-delay:${i*90}ms"><div class="ph"><img loading="lazy" src="../../assets/img/${p[3]}.jpg" alt="${p[0]} ${p[1]}"></div><div class="in"><small>${p[0]}</small><h4>${p[1]}</h4><p>${p[2]}</p><a href="${wa('Hola, quiero información de '+p[0]+' '+p[1])}" target="_blank" rel="noopener">Reservar →</a></div></article>`).join('');requestAnimationFrame(()=>requestAnimationFrame(()=>grid.querySelectorAll('.fade').forEach(e=>e.classList.remove('fade'))))}
+sw.querySelectorAll('button').forEach(b=>b.onclick=()=>{sw.querySelectorAll('button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-selected',x===b)});sw.classList.toggle('el',b.dataset.g==='el');render(b.dataset.g)});
+render('ella');
+
+// Glow + parallax de tarjetas
+const glow=document.getElementById('glow'),cards=document.querySelectorAll('.card');
+addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;cards.forEach(c=>{const d=+c.dataset.d;c.style.transform=`translate(${x*d}px,${y*d}px) rotate(${x*d/12}deg)`})});
+const bimg=document.getElementById('bimg');addEventListener('scroll',()=>{const r=bimg.parentElement.getBoundingClientRect();bimg.style.transform=`scale(1.2) translateY(${r.top*-0.08}px)`});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.getElementById('form').onsubmit=e=>{e.preventDefault();window.open(wa('Hola, quiero solicitar membresía en Pardo Private. Mi número: '+ph.value),'_blank');ok.textContent='Solicitud enviada. Un asesor te contactará.';e.target.reset()};
+</script>
+</body>
+</html>
