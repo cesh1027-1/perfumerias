@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuestas de diseño · Pardo</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Montserrat',sans-serif;font-weight:300;background:#0c0c0c;color:#ece6da;padding:80px 6%;min-height:100vh}
+h1,h3{font-family:'Cormorant Garamond',serif;font-weight:300}
+.k{font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:#c8a45d}
+h1{font-size:clamp(2.6rem,5.5vw,4.4rem);line-height:1.05;margin:14px 0 10px}
+h1 em{color:#e9d4a0}
+.sub{color:#8d877c;max-width:620px;margin-bottom:60px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+a.card{display:block;text-decoration:none;color:inherit;background:#151515;border:1px solid #222;overflow:hidden;transition:.5s}
+a.card:hover{border-color:#c8a45d;transform:translateY(-6px)}
+.ph{aspect-ratio:4/3;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+a.card:hover img{transform:scale(1.06)}
+.t{padding:26px}
+.t .n{font-family:'Cormorant Garamond';font-style:italic;color:#c8a45d;font-size:1.2rem}
+.t h3{font-size:2rem;margin:2px 0 6px}
+.t p{font-size:.84rem;color:#8d877c;line-height:1.7}
+.sw{display:flex;gap:6px;margin-top:14px}
+.sw i{width:18px;height:18px;border-radius:50%;border:1px solid #333}
+.go{display:inline-block;margin-top:18px;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:#e9d4a0;border-bottom:1px solid #c8a45d}
+footer{margin-top:80px;font-size:.7rem;color:#555;letter-spacing:.15em}
+</style>
+</head>
+<body>
+<div class="k">Propuesta privada · Perfumería multimarca</div>
+<h1>Tres conceptos para <em>Pardo</em></h1>
+<p class="sub">Cada propuesta tiene una identidad visual distinta. Ábrelas, recórrelas completas y cuéntanos cuál representa mejor a tu tienda.</p>
+<div class="grid">
+<a class="card" href="maison-noir/"><div class="ph"><img src="../assets/img/prada.jpg" alt="Vista previa Maison Noir"></div><div class="t"><span class="n">Propuesta I</span><h3>Maison Noir</h3><p>Negro y oro. Alta perfumería clásica con slider a pantalla completa y colección filtrable Ella / Él.</p><div class="sw"><i style="background:#0a0a0a"></i><i style="background:#c8a45d"></i><i style="background:#ece6da"></i></div><span class="go">Ver propuesta</span></div></a>
+<a class="card" href="atelier-ivoire/"><div class="ph"><img src="../assets/img/coco-mademoiselle.jpg" alt="Vista previa Atelier Ivoire"></div><div class="t"><span class="n">Propuesta II</span><h3>Atelier Ivoire</h3><p>Editorial parisino tipo revista de moda. Marfil y tinta, guía olfativa y citas privadas.</p><div class="sw"><i style="background:#f5f0e8"></i><i style="background:#161412"></i><i style="background:#8a6b3f"></i></div><span class="go">Ver propuesta</span></div></a>
+<a class="card" href="private-club/"><div class="ph"><img src="../assets/img/versace-eros.jpg" alt="Vista previa Private Club"></div><div class="t"><span class="n">Propuesta III</span><h3>Private Club</h3><p>Club privado nocturno. Azul medianoche y champán, efecto vidrio y niveles de membresía.</p><div class="sw"><i style="background:#070b16"></i><i style="background:#d9c29a"></i><i style="background:#1b2f6b"></i></div><span class="go">Ver propuesta</span></div></a>
+</div>
+<footer>Documento confidencial · 2026</footer>
+</body>
+</html>
