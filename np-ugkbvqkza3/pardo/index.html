@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>PARDO · La Mansión de los Perfumes | San Victorino, Bogotá</title>
+<meta name="description" content="PARDO, La Mansión de los Perfumes. Perfumería multimarca con fragancias originales para ella y para él. C.C. Manzana 12, Locales 122-123, San Victorino, Bogotá.">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/isotipo-p.png">
+<meta property="og:title" content="PARDO · La Mansión de los Perfumes">
+<meta property="og:description" content="Fragancias originales de las casas más prestigiosas del mundo. San Victorino, Bogotá.">
+<meta property="og:image" content="img/logo-principal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --night:#070b16;--night2:#0d1528;--champ:#d9c29a;--champ2:#f3e6c9;--bronze:#8a6b3f;
+  --ivory:#f5f0e8;--paper:#fbf8f3;--ink:#161412;--line:#d9d1c4;--mute:#8590a6;--imute:#7b746b;
+  --glass:#ffffff0d;--gb:#ffffff1f;
+  --gold:linear-gradient(135deg,#b8975e,#f3e6c9 48%,#a9864d);
+}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--night);color:#dfe3ec;font-family:'Manrope',sans-serif;font-weight:300;line-height:1.8;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Bodoni Moda',serif;font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.lbl{font-size:.68rem;font-weight:600;letter-spacing:.4em;text-transform:uppercase;color:var(--champ)}
+.goldtxt{background:var(--gold);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 7s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+.skip{position:absolute;left:-999px;top:10px;background:var(--champ);color:var(--night);padding:10px 16px;z-index:999}
+.skip:focus{left:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--champ);outline-offset:3px}
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;opacity:.55}
+#glow{position:fixed;width:560px;height:560px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,#d9c29a1c,transparent 65%);transform:translate(-50%,-50%);z-index:1;left:-999px}
+
+/* Preloader */
+#loader{position:fixed;inset:0;z-index:200;background:var(--night);display:grid;place-items:center;transition:opacity .9s .2s,visibility .9s .2s}
+#loader img{width:100px;animation:breathe 1.8s ease-in-out infinite}
+#loader.hide{opacity:0;visibility:hidden}
+@keyframes breathe{50%{opacity:.35;transform:scale(.95)}}
+
+/* Nav cápsula */
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1240px,94%);z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 12px 10px 26px;border-radius:999px;background:#0d152899;border:1px solid var(--gb);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .4s}
+nav.on-ivory{background:#070b16e6}
+nav .brand img{height:34px;width:auto}
+nav ul{display:flex;gap:30px;list-style:none;font-size:.74rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#b9c0cf}
+nav ul a:hover{color:var(--champ2)}
+.menu{display:none;background:none;border:1px solid #d9c29a66;color:var(--champ);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+
+/* Botones */
+.pill{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:999px;background:var(--gold);color:#111;font-weight:700;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;border:0;cursor:pointer;transition:transform .3s,box-shadow .3s;font-family:inherit}
+.pill:hover{transform:translateY(-2px);box-shadow:0 12px 30px #d9c29a44}
+.pill.ghost{background:transparent;color:var(--champ2);border:1px solid #d9c29a77}
+.pill.ink{background:var(--ink);color:var(--ivory)}
+.pill svg{width:16px;height:16px}
+.link{display:inline-flex;align-items:center;gap:14px;font-size:.7rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase}
+.link::after{content:"";width:46px;height:1px;background:currentColor;transition:width .5s}
+.link:hover::after{width:84px}
+
+/* ===== Hero ===== */
+.hero{position:relative;overflow:hidden}
+.hero .hin{position:relative;z-index:2;max-width:1360px;margin:auto;min-height:min(100vh,1000px);display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:40px;padding:130px 5% 80px}
+.hero .logo{width:min(560px,100%);margin:22px 0 6px;filter:drop-shadow(0 10px 40px #0009)}
+.hero h1{font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.3;color:var(--champ2);font-style:italic;margin:18px 0}
+.hero p{max-width:480px;color:#b9c0cf;margin-bottom:34px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:46px;flex-wrap:wrap}
+.stats b{display:block;font-family:'Bodoni Moda';font-weight:400;font-size:1.7rem;color:var(--champ2);line-height:1.2}
+.stats span{font-size:.74rem;color:var(--mute)}
+
+/* Portal (puerta de la mansión) */
+.portal{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:3/4}
+.portal .door{position:absolute;inset:0;border-radius:220px 220px 0 0;border:1.5px solid #d9c29a99;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#2a3a66 0%,#111a33 45%,#080c18 80%)}
+.portal .door::before{content:"";position:absolute;inset:16px;border:1px solid #d9c29a44;border-bottom:0;border-radius:206px 206px 0 0}
+.portal .door::after{content:"";position:absolute;inset:0;background:conic-gradient(from 180deg at 50% 100%,transparent 0 35%,#d9c29a14 45%,#d9c29a26 50%,#d9c29a14 55%,transparent 65%);animation:beam 6s ease-in-out infinite alternate}
+@keyframes beam{to{transform:rotate(6deg)}}
+.portal .isoc{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:42%;filter:drop-shadow(0 0 30px #d9c29a55)}
+.portal .ring{position:absolute;left:50%;top:44%;width:78%;aspect-ratio:1;transform:translate(-50%,-50%);animation:spin 40s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.portal .key{position:absolute;top:-10px;left:50%;width:20px;height:20px;background:var(--champ);transform:translateX(-50%) rotate(45deg);box-shadow:0 0 20px #d9c29a88}
+.portal .steps{position:absolute;left:-8%;right:-8%;bottom:-12px;height:1px;background:var(--champ)}
+.portal .steps::after{content:"";position:absolute;left:5%;right:5%;top:9px;height:1px;background:#d9c29a77}
+.spark{position:absolute;width:10px;height:10px;background:var(--champ2);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15;transform:scale(.5)}}
+.portal .cap{position:absolute;left:50%;bottom:12%;transform:translateX(-50%);text-align:center;white-space:nowrap}
+.portal .cap b{display:block;font-family:'Bodoni Moda';font-weight:400;font-style:italic;font-size:1.3rem;color:var(--champ2)}
+.portal .cap span{font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--mute)}
+
+/* Marcas (solo texto) */
+.brands{padding:30px 0;overflow:hidden;white-space:nowrap;border-top:1px solid var(--gb);border-bottom:1px solid var(--gb);position:relative;z-index:2;background:var(--night)}
+.brands .tr{display:inline-block;animation:mq 48s linear infinite}
+.brands span{font-family:'Bodoni Moda';font-size:1.6rem;letter-spacing:.18em;color:#9aa2b4;margin:0 32px}
+.brands i{font-style:normal;color:var(--champ);font-size:.8rem;margin-left:64px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ===== Secciones ===== */
+.ivory{background:var(--ivory);color:var(--ink);position:relative;z-index:2}
+.ivory .lbl{color:var(--bronze)}
+.night{position:relative;z-index:2;overflow:hidden}
+.night .wrap{position:relative;z-index:2}
+.wrap{max-width:1360px;margin:auto;padding:120px 5%}
+.sh{display:grid;grid-template-columns:120px 1fr auto;align-items:end;gap:30px;margin-bottom:70px;padding-bottom:22px;border-bottom:1px solid var(--ink)}
+.sh .num{font-family:'Bodoni Moda';font-size:4rem;line-height:.8;color:var(--bronze)}
+.sh h2{font-size:clamp(2.3rem,5vw,4.2rem);line-height:1}
+.sh h2 em{color:var(--bronze)}
+.night .sh{border-color:#d9c29a66}.night .sh .num{color:var(--champ)}.night .sh .lbl{color:var(--mute)}
+.night .sh h2{color:#f1f2f6}
+
+/* 01 La Mansión */
+.welcome{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
+.monument{position:relative;width:min(420px,100%);aspect-ratio:3/4;justify-self:center}
+.monument .a{position:absolute;inset:0;border:1.5px solid var(--bronze);border-radius:210px 210px 0 0}
+.monument .b{position:absolute;inset:16px;border:1px solid #8a6b3f66;border-radius:196px 196px 0 0}
+.monument .c{position:absolute;inset:32px;border-radius:182px 182px 0 0;background:radial-gradient(ellipse at 50% 40%,#16203d 0%,#0b1124 60%,#070b16 100%);display:grid;place-items:center;overflow:hidden}
+.monument .c img{width:46%;filter:drop-shadow(0 0 26px #d9c29a44)}
+.monument .key{position:absolute;top:-9px;left:50%;width:18px;height:18px;background:var(--bronze);transform:translateX(-50%) rotate(45deg)}
+.monument .base{position:absolute;left:-24px;right:-24px;bottom:-10px;height:1px;background:var(--bronze)}
+.monument .year{position:absolute;right:-18px;top:28%;writing-mode:vertical-rl;font-size:.62rem;letter-spacing:.5em;text-transform:uppercase;color:var(--bronze)}
+.welcome h3{font-size:clamp(2.1rem,3.8vw,3.4rem);line-height:1.1;margin:14px 0 22px}
+.welcome h3 em{color:var(--bronze)}
+.welcome p{color:#4d4741;margin-bottom:16px}
+.note{display:flex;gap:16px;align-items:center;margin:30px 0 36px;padding:18px 22px;border:1px solid var(--line);background:var(--paper)}
+.note b{font-family:'Bodoni Moda';font-weight:400;font-size:1.15rem}
+.note span{font-size:.85rem;color:var(--imute)}
+.dia{width:12px;height:12px;flex:none;background:var(--bronze);transform:rotate(45deg)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin-top:100px}
+.pillars>div{padding:40px 34px 10px;border-right:1px solid var(--line)}
+.pillars>div:last-child{border-right:0}
+.pillars .n{font-family:'Bodoni Moda';font-style:italic;font-size:2.6rem;color:var(--bronze);line-height:1}
+.pillars h4{font-size:1.5rem;margin:12px 0 8px}
+.pillars p{font-size:.9rem;color:var(--imute)}
+
+/* 02 Los Salones (noche, vidrio) */
+.salons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.salon{position:relative;border-radius:28px;padding:44px 36px 38px;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;flex-direction:column;transition:transform .5s,border-color .5s;overflow:hidden}
+.salon:hover{transform:translateY(-8px);border-color:#d9c29a77}
+.salon::before{content:"";position:absolute;top:-40%;right:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#d9c29a22,transparent 70%)}
+.salon .ic{width:64px;height:64px;color:var(--champ);margin-bottom:26px}
+.salon h3{font-size:2.6rem;line-height:1;color:#f1f2f6}
+.salon .sub{font-family:'Bodoni Moda';font-style:italic;color:var(--champ2);margin:6px 0 18px}
+.salon p{font-size:.9rem;color:var(--mute);margin-bottom:22px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;flex:1;align-content:flex-start}
+.tags span{font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:99px;border:1px solid var(--gb);color:#c8cdd8}
+.salon.feat{background:linear-gradient(160deg,#d9c29a24,#ffffff08);border-color:#d9c29a77}
+
+/* 03 Guía olfativa: rueda */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.acc .item>button{width:100%;display:grid;grid-template-columns:60px 1fr 30px;align-items:center;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:24px 0;cursor:pointer;font:inherit;color:inherit}
+.acc .item>button span{font-family:'Bodoni Moda';color:var(--bronze)}
+.acc .item>button h3{font-size:2rem}
+.acc .item>button i{font-style:normal;font-size:1.6rem;transition:transform .5s}
+.acc .item.open>button i{transform:rotate(45deg)}
+.acc .body{max-height:0;overflow:hidden;transition:max-height .7s ease}
+.acc .item.open .body{max-height:260px}
+.acc .body p{padding:4px 0 24px 60px;color:var(--imute)}
+.acc .body b{font-weight:600;color:var(--ink)}
+.wheel{position:relative;width:min(480px,100%);aspect-ratio:1;justify-self:center}
+.wheel svg{width:100%;height:100%;overflow:visible}
+.wheel .seg{cursor:pointer;transition:transform .6s cubic-bezier(.2,.7,.2,1),fill .5s;transform-origin:250px 250px}
+.wheel .seg.on{transform:scale(1.06)}
+.wheel .t{font-family:'Bodoni Moda';font-size:20px;pointer-events:none}
+.wheel .center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34%;aspect-ratio:1;border-radius:50%;background:var(--night);display:grid;place-items:center;box-shadow:0 20px 50px #0004}
+.wheel .center img{width:56%}
+
+/* 04 Pirámide olfativa */
+.pyr{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.tri{position:relative;width:min(460px,100%);aspect-ratio:1/0.9;justify-self:center;clip-path:polygon(50% 0,100% 100%,0 100%);display:grid;grid-template-rows:1fr 1.25fr 1.5fr}
+.tri div{display:grid;place-items:end center;padding-bottom:14px;font-family:'Bodoni Moda';font-size:1.15rem;transition:filter .4s;cursor:default}
+.tri div:nth-child(1){background:linear-gradient(#f3e6c9,#e6d2a8);color:#3a2d18}
+.tri div:nth-child(2){background:linear-gradient(#d9c29a,#c3a670);color:#2b2112;border-top:2px solid var(--night)}
+.tri div:nth-child(3){background:linear-gradient(#a9864d,#8a6b3f);color:#f5f0e8;border-top:2px solid var(--night)}
+.tri div:hover{filter:brightness(1.12)}
+.layers{counter-reset:l}
+.layer{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--gb)}
+.layer .t{font-family:'Bodoni Moda';font-size:1rem;color:var(--champ);letter-spacing:.06em}
+.layer h4{font-size:1.4rem;color:#f1f2f6}
+.layer h4 small{font-family:'Manrope';font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-left:10px}
+.layer p{color:var(--mute);font-size:.9rem}
+.conc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:80px}
+.conc>div{border-radius:20px;padding:26px 22px;background:var(--glass);border:1px solid var(--gb)}
+.conc b{display:block;font-family:'Bodoni Moda';font-weight:400;font-size:1.35rem;color:var(--champ2)}
+.conc small{display:block;font-size:.66rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--champ);margin:2px 0 10px}
+.conc .bar{height:3px;border-radius:3px;background:#ffffff14;overflow:hidden;margin-bottom:12px}
+.conc .bar i{display:block;height:100%;background:var(--gold)}
+.conc p{font-size:.82rem;color:var(--mute)}
+
+/* 05 Ritual (marfil, 4 pasos) */
+.ritual{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+.ritual>div{padding:38px 30px 20px;border-right:1px solid var(--line);position:relative}
+.ritual>div:last-child{border-right:0}
+.ritual .n{font-family:'Bodoni Moda';font-size:3.4rem;line-height:1;color:var(--bronze)}
+.ritual h4{font-size:1.45rem;margin:14px 0 8px}
+.ritual p{font-size:.9rem;color:var(--imute)}
+
+/* 06 La Colección (mostrario con fotos propias del cliente) */
+#coleccion{background:linear-gradient(180deg,var(--night2),var(--night) 70%)}
+.intro{max-width:640px;color:#b9c0cf;margin:-30px 0 50px}
+/* Quiz */
+.quiz{border-radius:28px;padding:38px 40px;background:var(--glass);border:1px solid var(--gb);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);margin-bottom:64px}
+.quiz .qh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.quiz h3{font-size:clamp(1.6rem,2.6vw,2.2rem);color:#f1f2f6;line-height:1.1}
+.quiz h3 em{color:var(--champ2)}
+.quiz .qs{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.quiz fieldset{border:0;min-width:0}
+.quiz legend{font-size:.66rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);margin-bottom:12px}
+.quiz legend span{font-family:'Bodoni Moda';font-size:1rem;letter-spacing:0;margin-right:8px;color:var(--champ2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{position:relative;cursor:pointer}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label span{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border-radius:99px;border:1px solid var(--gb);color:#c8cdd8;transition:background .3s,color .3s,border-color .3s}
+.chips label:hover span{border-color:#d9c29a77}
+.chips input:checked+span{background:var(--gold);color:#111;border-color:transparent}
+.chips input:focus-visible+span{outline:2px solid var(--champ);outline-offset:3px}
+.qres{margin-top:30px;padding-top:26px;border-top:1px solid var(--gb)}
+.qres[hidden]{display:none}
+.qres p{font-size:.86rem;color:var(--mute);margin-bottom:16px}
+.qres .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.qres .mini button{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;text-align:left;padding:10px;border-radius:18px;background:#ffffff08;border:1px solid var(--gb);color:inherit;font:inherit;cursor:pointer;transition:border-color .3s,transform .3s}
+.qres .mini button:hover{border-color:#d9c29a77;transform:translateY(-3px)}
+.qres .mini img{width:72px;height:72px;object-fit:cover;border-radius:12px}
+.qres .mini small{display:block;font-size:.6rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--champ)}
+.qres .mini b{display:block;font-family:'Bodoni Moda';font-weight:400;font-size:1.15rem;color:#f1f2f6;line-height:1.2}
+.qres .mini i{font-style:normal;font-size:.75rem;color:var(--mute)}
+/* Filtros */
+.filters{display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center;justify-content:space-between;margin-bottom:34px}
+.filters .chips label span{padding:8px 15px}
+.fsel{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.fsel select,.fsel input{font:inherit;font-size:.8rem;color:#dfe3ec;background:#ffffff0a;border:1px solid var(--gb);border-radius:99px;padding:10px 18px;min-height:42px}
+.fsel select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:linear-gradient(45deg,transparent 50%,#d9c29a 50%),linear-gradient(135deg,#d9c29a 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 15px) 50%;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+.fsel select option{background:var(--night2);color:#dfe3ec}
+.fsel input{width:220px}
+.fsel input::placeholder{color:var(--mute)}
+.count{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+/* Tarjetas */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prod{position:relative;border-radius:22px;overflow:hidden;background:#0b1224;border:1px solid var(--gb);display:flex;flex-direction:column;transition:transform .5s,border-color .5s,box-shadow .5s}
+.prod:hover{transform:translateY(-6px);border-color:#d9c29a66;box-shadow:0 24px 50px #0008}
+.prod .open{display:block;background:none;border:0;padding:0;color:inherit;font:inherit;text-align:left;cursor:pointer;flex:1}
+.prod .ph{position:relative;aspect-ratio:1;overflow:hidden;background:#05070d}
+.prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.prod:hover .ph img{transform:scale(1.05)}
+.prod .ph .g{position:absolute;left:12px;top:12px;font-size:.58rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:5px 11px;border-radius:99px;background:#070b16cc;border:1px solid var(--gb);color:var(--champ2);backdrop-filter:blur(6px)}
+.prod .tx{padding:18px 20px 6px}
+.prod small{display:block;font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--champ)}
+.prod h3{font-size:1.45rem;line-height:1.15;color:#f1f2f6;margin:4px 0 4px}
+.prod .meta{font-size:.78rem;color:var(--mute)}
+.prod .ft{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 20px 18px}
+.prod .ft .more{font-size:.62rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--champ2)}
+.prod .ft a{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid #d9c29a77;color:var(--champ)}
+.prod .ft a:hover{background:var(--gold);color:#111;border-color:transparent}
+.prod .ft a svg{width:17px;height:17px}
+.empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--mute)}
+.empty b{display:block;font-family:'Bodoni Moda';font-weight:400;font-size:1.5rem;color:var(--champ2);margin-bottom:6px}
+.prod[hidden]{display:none}
+.more-cta{display:flex;justify-content:center;margin-top:46px}
+/* Ficha (modal) */
+dialog.sheet{border:0;padding:0;margin:auto;width:min(1060px,94vw);max-height:92vh;border-radius:28px;background:var(--night2);color:#dfe3ec;box-shadow:0 40px 120px #000c;overflow:hidden}
+dialog.sheet::backdrop{background:#03050bcc;backdrop-filter:blur(6px)}
+dialog.sheet[open]{animation:pop .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.98)}}
+.sheet .in2{display:grid;grid-template-columns:1fr 1.05fr;max-height:92vh}
+.sheet .pic{background:#05070d;min-height:100%}
+.sheet .pic img{width:100%;height:100%;object-fit:cover}
+.sheet .bd{padding:44px 44px 36px;overflow-y:auto;max-height:92vh}
+.sheet .x{position:absolute;right:16px;top:16px;z-index:3;width:44px;height:44px;border-radius:50%;border:1px solid var(--gb);background:#070b16cc;color:var(--champ2);font-size:1.1rem;cursor:pointer}
+.sheet .x:hover{border-color:var(--champ)}
+.sheet h3{font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.05;color:#f1f2f6;margin:6px 0 8px}
+.sheet .meta{font-size:.82rem;color:var(--mute);margin-bottom:18px}
+.sheet .meta b{color:var(--champ2);font-weight:500}
+.sheet .desc{font-family:'Bodoni Moda';font-style:italic;font-size:1.12rem;line-height:1.55;color:var(--champ2);margin-bottom:24px}
+.sheet .nt{border-top:1px solid var(--gb)}
+.sheet .nt>div{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--gb)}
+.sheet .nt b{font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);padding-top:4px}
+.sheet .nt span{font-size:.9rem;color:#c8cdd8}
+.sheet .bars{display:grid;grid-template-columns:1fr 1fr;gap:16px 28px;margin:22px 0}
+.sheet .bars b{display:block;font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--champ);margin-bottom:8px}
+.dots{display:flex;gap:6px}
+.dots i{flex:1;height:4px;border-radius:4px;background:#ffffff14}
+.dots i.on{background:var(--gold)}
+.sheet .bars span{font-size:.88rem;color:#c8cdd8}
+.sheet .acts2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.sheet .nav2{display:flex;gap:8px;margin-left:auto}
+.sheet .nav2 button{width:44px;height:44px;border-radius:50%;border:1px solid var(--gb);background:none;color:var(--champ2);cursor:pointer;font-size:1rem}
+.sheet .nav2 button:hover{border-color:var(--champ)}
+.sheet .fine{font-size:.72rem;color:var(--mute);margin-top:18px}
+
+/* Banda catálogo */
+.cat{position:relative;z-index:2;overflow:hidden;text-align:center;padding:150px 6%;background:radial-gradient(ellipse at 50% 0,#1b2a55 0,#0b1226 45%,var(--night) 80%)}
+.cat .iso{width:70px;margin:0 auto 24px;filter:drop-shadow(0 0 24px #d9c29a55)}
+.cat h2{font-size:clamp(2.2rem,4.6vw,4rem);line-height:1.1;color:#f1f2f6;max-width:900px;margin:16px auto 20px}
+.cat p{max-width:620px;margin:0 auto 38px;color:#b9c0cf}
+.cat .opts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.cat .rings{position:absolute;left:50%;top:50%;width:1100px;aspect-ratio:1;transform:translate(-50%,-50%);pointer-events:none}
+.cat .rings i{position:absolute;inset:0;border:1px solid #d9c29a14;border-radius:50%}
+.cat .rings i:nth-child(2){inset:120px}.cat .rings i:nth-child(3){inset:240px}
+.cat .c{position:relative}
+
+/* 06 Preguntas */
+.faq{max-width:920px;margin:auto}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;cursor:pointer;font-family:'Bodoni Moda';font-size:1.45rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Manrope';font-size:1.5rem;color:var(--bronze);transition:transform .4s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 26px;color:var(--imute);max-width:760px}
+
+/* Cita */
+.quote{position:relative;z-index:2;padding:170px 8%;text-align:center;overflow:hidden;background:var(--night)}
+.quote::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,#3b2a1244 0,transparent 60%)}
+.quote blockquote{position:relative;font-family:'Bodoni Moda';font-style:italic;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.35;max-width:980px;margin:auto;color:var(--champ2)}
+.quote .iso{position:relative;width:54px;margin:0 auto 26px}
+.quote .lbl{position:relative;margin-top:26px}
+.quote .bigp{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(520px,80vw);opacity:.05;pointer-events:none}
+
+/* 07 Visítanos */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;border:1px solid var(--ink)}
+.visit .info{padding:64px 56px;background:var(--ink);color:var(--ivory)}
+.visit .info .lbl{color:var(--champ)}
+.visit h3{font-size:clamp(2.1rem,3.6vw,3.2rem);line-height:1.08;margin:14px 0 26px}
+.visit h3 em{color:var(--champ)}
+.row{display:grid;grid-template-columns:40px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid #ffffff1f}
+.row svg{width:22px;height:22px;color:var(--champ);margin-top:4px}
+.row b{display:block;font-size:.62rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--champ);margin-bottom:2px}
+.row span,.row a{font-size:1rem}
+.row a:hover{color:var(--champ2)}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+.map{position:relative;min-height:540px;background:var(--paper)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.9) sepia(.25) contrast(.95)}
+
+footer{position:relative;z-index:2;padding:80px 5% 40px;text-align:center;border-top:1px solid var(--gb)}
+footer .lg{width:min(290px,70vw);margin:0 auto 28px}
+footer ul{display:flex;justify-content:center;gap:28px;list-style:none;font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#9aa2b4;margin-bottom:24px;flex-wrap:wrap}
+footer ul a:hover{color:var(--champ2)}
+footer address{font-style:normal;font-size:.86rem;color:var(--mute);margin-bottom:28px}
+footer small{font-size:.64rem;letter-spacing:.12em;color:#59606f}
+
+.wa{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;align-items:center;background:var(--gold);color:var(--night);border-radius:999px;box-shadow:0 12px 34px #000a}
+.wa .ic{width:60px;height:60px;display:grid;place-items:center;flex:none}
+.wa .ic svg{width:28px;height:28px}
+.wa .tx{max-width:0;overflow:hidden;white-space:nowrap;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:max-width .5s,padding .5s}
+.wa:hover .tx{max-width:200px;padding-left:22px}
+.wa::after{content:"";position:absolute;inset:0;border-radius:999px;animation:ring 2.6s infinite}
+@keyframes ring{0%{box-shadow:0 0 0 0 #d9c29a88}70%{box-shadow:0 0 0 16px #d9c29a00}100%{box-shadow:0 0 0 0 #d9c29a00}}
+
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s,transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1100px){.conc{grid-template-columns:repeat(2,1fr)}.ritual{grid-template-columns:repeat(2,1fr)}.ritual>div:nth-child(2){border-right:0}.ritual>div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:960px){
+  nav ul{position:fixed;top:-16px;right:-3vw;height:100vh;width:min(320px,82vw);flex-direction:column;justify-content:center;gap:26px;padding:40px;background:var(--night2);border-left:1px solid var(--gb);transform:translateX(110%);transition:transform .5s}
+  nav ul.open{transform:none}
+  .menu{display:block;position:relative;z-index:2}
+  nav .navcta{display:none}
+  .hero .hin{grid-template-columns:1fr;padding-top:120px;gap:70px}
+  .portal{width:min(340px,86%)}
+  .portal .ring{width:70%;top:40%}.portal .isoc{top:40%;width:36%}.portal .cap{bottom:8%}
+  #glow{display:none}
+  .welcome,.guide,.pyr{grid-template-columns:1fr;gap:60px}
+  .pillars,.salons{grid-template-columns:1fr}
+  .pillars>div{border-right:0;border-bottom:1px solid var(--line);padding:30px 0}
+  .sh{grid-template-columns:1fr;gap:10px}
+  .visit{grid-template-columns:1fr}.visit .info{padding:48px 26px}.map{min-height:360px}
+  .wrap{padding:96px 5%}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .quiz{padding:30px 24px}.quiz .qs{grid-template-columns:1fr;gap:20px}.qres .mini{grid-template-columns:1fr}
+  .intro{margin-top:0}
+  .filters{flex-direction:column;align-items:stretch}
+  .sheet .in2{grid-template-columns:1fr;max-height:none}
+  .sheet .pic{aspect-ratio:1;max-height:46vh;min-height:0}
+  .sheet .bd{max-height:none;padding:28px 24px 28px}
+  dialog.sheet{overflow-y:auto}
+}
+@media(max-width:560px){
+  .grid{gap:12px}.prod{border-radius:16px}.prod .tx{padding:12px 12px 2px}.prod h3{font-size:1.08rem}.prod .meta{font-size:.7rem}
+  .prod .ft{padding:8px 12px 12px}.prod .ft .more{font-size:.54rem;letter-spacing:.16em}.prod .ft a{width:34px;height:34px}
+  .prod .ph .g{left:8px;top:8px;font-size:.5rem;padding:4px 8px}
+  .fsel select,.fsel input{flex:1 1 140px;width:auto}
+  .sheet .bars{grid-template-columns:1fr}.sheet .nt>div{grid-template-columns:80px 1fr}
+}
+@media(max-width:560px){.conc,.ritual{grid-template-columns:1fr}.ritual>div{border-right:0!important;border-bottom:1px solid var(--line)}.stats{gap:24px}.faq summary{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<div id="loader" aria-hidden="true"><img src="img/isotipo-p.png" alt=""></div>
+<div id="glow" aria-hidden="true"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M12 22s7-6.6 7-12.5A7 7 0 0 0 5 9.5C5 15.4 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 9l1.5-5h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></symbol>
+<!-- Frasco femenino -->
+<symbol id="i-ella" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M26 6h12v8H26z"/><path d="M29 14h6v5h-6z"/><path d="M32 19c-12 0-18 9-18 20 0 10 7 19 18 19s18-9 18-19c0-11-6-20-18-20z"/><path d="M22 40c2 6 6 9 10 9"/></g></symbol>
+<!-- Frasco masculino -->
+<symbol id="i-el" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 4h16v10H24z"/><path d="M28 14h8v5h-8z"/><rect x="14" y="19" width="36" height="40" rx="3"/><path d="M22 30h20v16H22z"/></g></symbol>
+<!-- Regalo -->
+<symbol id="i-gift" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="1.4"><rect x="10" y="24" width="44" height="10"/><path d="M14 34v24h36V34M32 24v34"/><path d="M32 24c-4-10-16-12-16-4 0 4 8 4 16 4zm0 0c4-10 16-12 16-4 0 4-8 4-16 4z"/></g></symbol>
+</svg>
+
+<nav id="nav" aria-label="Principal">
+<a class="brand" href="#inicio" aria-label="PARDO, inicio"><img src="img/logo-horizontal.png" alt="PARDO · La Mansión de los Perfumes"></a>
+<ul id="links">
+<li><a href="#mansion">La Mansión</a></li>
+<li><a href="#salones">Salones</a></li>
+<li><a href="#guia">Guía olfativa</a></li>
+<li><a href="#coleccion">Colección</a></li>
+<li><a href="#catalogo">Catálogo</a></li>
+<li><a href="#visitanos">Visítanos</a></li>
+</ul>
+<a class="pill navcta" data-wa="Hola PARDO, quiero información sobre sus perfumes." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+<button class="menu" id="menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="links">☰</button>
+</nav>
+
+<main id="main">
+<!-- HERO -->
+<header class="hero" id="inicio">
+<span class="orb" style="width:520px;height:520px;background:#1b2f6b;top:-160px;right:-120px"></span>
+<span class="orb" style="width:440px;height:440px;background:#3b2a12;bottom:-160px;left:-140px"></span>
+<div class="hin">
+<div>
+<div class="lbl rv">Perfumería multimarca · San Victorino</div>
+<img class="logo rv" src="img/logo-principal.png" alt="PARDO · La Mansión de los Perfumes" width="1100" height="352">
+<h1 class="rv">Lo exclusivo no se exhibe. <span class="goldtxt">Se descubre.</span></h1>
+<p class="rv">Las fragancias originales de las casas más prestigiosas del mundo, para ella y para él, reunidas bajo un mismo techo.</p>
+<div class="btns rv"><a class="pill" href="#catalogo">Solicitar catálogo</a><a class="pill ghost" href="#coleccion">Ver la colección</a></div>
+<div class="stats rv"><div><b>100%</b><span>Originales</span></div><div><b>Ella & Él</b><span>Todas las familias</span></div><div><b>122 – 123</b><span>Locales C.C. Manzana 12</span></div></div>
+</div>
+<div class="portal rv" aria-hidden="true">
+<div class="door">
+<svg class="ring" viewBox="0 0 200 200"><defs><path id="rp" d="M100 100m-86 0a86 86 0 1 1 172 0a86 86 0 1 1-172 0"/></defs><text font-family="Manrope" font-size="8.6" font-weight="600" letter-spacing="4.4" fill="#d9c29a"><textPath href="#rp">· LA MANSIÓN DE LOS PERFUMES · PARDO · ELLA · ÉL </textPath></text><circle cx="100" cy="100" r="74" fill="none" stroke="#d9c29a33"/></svg>
+<img class="isoc" src="img/isotipo-p.png" alt="">
+<div class="cap"><b>Bienvenido a casa</b><span>Desde Luxury · Ahora PARDO</span></div>
+</div>
+<span class="key"></span><span class="steps"></span>
+<i class="spark" style="left:-6%;top:22%"></i><i class="spark" style="right:-4%;top:12%;animation-delay:1s"></i><i class="spark" style="right:-8%;top:60%;animation-delay:2s;width:7px;height:7px"></i><i class="spark" style="left:4%;bottom:6%;animation-delay:1.6s;width:6px;height:6px"></i>
+</div>
+</div>
+</header>
+
+<div class="brands" aria-label="Casas de perfumería que manejamos"><div class="tr">
+<span>CHANEL<i>✦</i></span><span>DIOR<i>✦</i></span><span>VERSACE<i>✦</i></span><span>PRADA<i>✦</i></span><span>YVES SAINT LAURENT<i>✦</i></span><span>GIORGIO ARMANI<i>✦</i></span><span>DOLCE & GABBANA<i>✦</i></span><span>HUGO BOSS<i>✦</i></span><span>CAROLINA HERRERA<i>✦</i></span><span>PACO RABANNE<i>✦</i></span>
+<span>CHANEL<i>✦</i></span><span>DIOR<i>✦</i></span><span>VERSACE<i>✦</i></span><span>PRADA<i>✦</i></span><span>YVES SAINT LAURENT<i>✦</i></span><span>GIORGIO ARMANI<i>✦</i></span><span>DOLCE & GABBANA<i>✦</i></span><span>HUGO BOSS<i>✦</i></span><span>CAROLINA HERRERA<i>✦</i></span><span>PACO RABANNE<i>✦</i></span>
+</div></div>
+
+<!-- 01 LA MANSIÓN -->
+<section class="ivory" id="mansion"><div class="wrap">
+<div class="sh rv"><div class="num">01</div><h2>La <em>Mansión</em></h2><span class="lbl">Bienvenido a casa</span></div>
+<div class="welcome">
+<div class="monument rv" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="key"></span><div class="c"><img src="img/isotipo-p.png" alt=""></div><span class="base"></span><span class="year">San Victorino · Bogotá</span></div>
+<div class="rv">
+<div class="lbl">Una casa dedicada al perfume</div>
+<h3>El arte de elegir <em>tu firma</em></h3>
+<p>En PARDO reunimos las fragancias más deseadas del mundo. Cada frasco que ofrecemos es original y lo seleccionamos pensando en quienes buscan algo más que un aroma: una forma de ser recordados.</p>
+<p>Te recibimos con calma, te ayudamos a probar y te acompañamos hasta encontrar la fragancia ideal, para ti o para regalar.</p>
+<div class="note"><span class="dia"></span><div><b>Luxury ahora es PARDO</b><br><span>La misma atención y los mismos locales, con una nueva identidad.</span></div></div>
+<a class="link" href="#salones">Conocer los salones</a>
+</div>
+</div>
+<div class="pillars">
+<div class="rv"><div class="n">I.</div><h4>Originalidad</h4><p>Trabajamos únicamente con fragancias originales de cada casa de perfumería.</p></div>
+<div class="rv"><div class="n">II.</div><h4>Asesoría</h4><p>Te orientamos según tu estilo, tu piel y la ocasión, sin prisa y sin compromiso.</p></div>
+<div class="rv"><div class="n">III.</div><h4>Variedad</h4><p>Las grandes casas de París, Milán y Nueva York en un solo lugar, para dama y caballero.</p></div>
+</div>
+</div></section>
+
+<!-- 02 LOS SALONES -->
+<section class="night" id="salones">
+<span class="orb" style="width:480px;height:480px;background:#1b2f6b;top:10%;left:-200px"></span>
+<span class="orb" style="width:420px;height:420px;background:#3b2a12;bottom:0;right:-160px"></span>
+<div class="wrap">
+<div class="sh rv"><div class="num">02</div><h2>Los <span class="goldtxt">Salones</span></h2><span class="lbl">Tres puertas, un mismo lujo</span></div>
+<div class="salons">
+<article class="salon rv"><svg class="ic"><use href="#i-ella"/></svg><h3>Ella</h3><div class="sub">Pour Femme</div><p>Fragancias que acompañan cada faceta: luminosas para el día, envolventes para la noche.</p><div class="tags"><span>Florales</span><span>Dulces</span><span>Orientales</span><span>Frutales</span></div><a class="pill ghost" data-wa="Hola PARDO, quiero ver el catálogo de fragancias para ella." href="#"><svg><use href="#i-wa"/></svg>Catálogo Ella</a></article>
+<article class="salon feat rv"><svg class="ic"><use href="#i-el"/></svg><h3>Él</h3><div class="sub">Pour Homme</div><p>Carácter y presencia: maderas, especias y frescura para el hombre que deja huella.</p><div class="tags"><span>Amaderados</span><span>Frescos</span><span>Especiados</span><span>Intensos</span></div><a class="pill" data-wa="Hola PARDO, quiero ver el catálogo de fragancias para él." href="#"><svg><use href="#i-wa"/></svg>Catálogo Él</a></article>
+<article class="salon rv"><svg class="ic"><use href="#i-gift"/></svg><h3>Regalos</h3><div class="sub">Pour Offrir</div><p>Cumpleaños, aniversarios, fechas especiales. Cuéntanos para quién es y te ayudamos a acertar.</p><div class="tags"><span>Para ella</span><span>Para él</span><span>Ocasiones</span></div><a class="pill ghost" data-wa="Hola PARDO, quiero regalar un perfume. ¿Me ayudan a elegir?" href="#"><svg><use href="#i-wa"/></svg>Quiero regalar</a></article>
+</div>
+</div>
+</section>
+
+<!-- 03 GUÍA OLFATIVA -->
+<section class="ivory" id="guia"><div class="wrap">
+<div class="sh rv"><div class="num">03</div><h2>Guía <em>olfativa</em></h2><span class="lbl">Encuentra tu familia</span></div>
+<div class="guide">
+<div class="wheel rv"><svg viewBox="0 0 500 500" id="wheelSvg" role="img" aria-label="Rueda de familias olfativas"></svg><div class="center"><img src="img/isotipo-p.png" alt=""></div></div>
+<div class="acc rv" id="acc">
+<div class="item open"><button aria-expanded="true"><span>i.</span><h3>Florales</h3><i>+</i></button><div class="body"><p>Rosa, jazmín, peonía y tuberosa. Románticos, femeninos y atemporales. <b>Ideal para: el día, eventos y ocasiones especiales.</b></p></div></div>
+<div class="item"><button aria-expanded="false"><span>ii.</span><h3>Amaderados</h3><i>+</i></button><div class="body"><p>Cedro, sándalo y vetiver. Profundos, sobrios y con carácter. <b>Ideal para: la oficina, la tarde y climas frescos.</b></p></div></div>
+<div class="item"><button aria-expanded="false"><span>iii.</span><h3>Orientales</h3><i>+</i></button><div class="body"><p>Vainilla, ámbar, especias y resinas. Cálidos y envolventes. <b>Ideal para: la noche, citas y celebraciones.</b></p></div></div>
+<div class="item"><button aria-expanded="false"><span>iv.</span><h3>Frescos</h3><i>+</i></button><div class="body"><p>Cítricos, notas marinas y aromáticas. Limpios y luminosos. <b>Ideal para: el día a día, el deporte y climas cálidos.</b></p></div></div>
+</div>
+</div>
+</div></section>
+
+<!-- 04 ANATOMÍA DE UN PERFUME -->
+<section class="night" id="anatomia">
+<span class="orb" style="width:460px;height:460px;background:#1b2f6b;bottom:-120px;left:30%"></span>
+<div class="wrap">
+<div class="sh rv"><div class="num">04</div><h2>Anatomía de un <span class="goldtxt">perfume</span></h2><span class="lbl">Aprende a elegir</span></div>
+<div class="pyr">
+<div class="tri rv" aria-hidden="true"><div>Salida</div><div>Corazón</div><div>Fondo</div></div>
+<div class="layers">
+<div class="layer rv"><span class="t">I.</span><div><h4>Notas de salida <small>0 – 30 min</small></h4><p>La primera impresión. Cítricos, frutas y hierbas que se perciben al aplicar y se evaporan rápido.</p></div></div>
+<div class="layer rv"><span class="t">II.</span><div><h4>Notas de corazón <small>30 min – 4 h</small></h4><p>El carácter del perfume. Flores y especias que definen su personalidad.</p></div></div>
+<div class="layer rv"><span class="t">III.</span><div><h4>Notas de fondo <small>4 h en adelante</small></h4><p>La huella que permanece. Maderas, ámbar, almizcle y vainilla que fijan la fragancia en la piel.</p></div></div>
+</div>
+</div>
+<div class="conc">
+<div class="rv"><small>Concentración</small><b>Eau de Cologne</b><div class="bar"><i style="width:25%"></i></div><p>Ligera y refrescante. Ideal para reaplicar durante el día.</p></div>
+<div class="rv"><small>Concentración</small><b>Eau de Toilette</b><div class="bar"><i style="width:50%"></i></div><p>Fresca y versátil, perfecta para el uso diario.</p></div>
+<div class="rv"><small>Concentración</small><b>Eau de Parfum</b><div class="bar"><i style="width:75%"></i></div><p>Más intensa y duradera. La favorita para la noche.</p></div>
+<div class="rv"><small>Concentración</small><b>Parfum · Elixir</b><div class="bar"><i style="width:100%"></i></div><p>La máxima concentración. Pocas gotas, gran presencia.</p></div>
+</div>
+</div>
+</section>
+
+<!-- 05 EL RITUAL -->
+<section class="ivory" id="ritual"><div class="wrap">
+<div class="sh rv"><div class="num">05</div><h2>El <em>Ritual</em> PARDO</h2><span class="lbl">Cómo te atendemos</span></div>
+<div class="ritual">
+<div class="rv"><div class="n">01</div><h4>Conversación</h4><p>Conocemos tu estilo, la ocasión y los aromas que te gustan, o los de quien recibirá el regalo.</p></div>
+<div class="rv"><div class="n">02</div><h4>Prueba sobre piel</h4><p>Cada fragancia evoluciona distinto en cada persona. Por eso la probamos en ti antes de decidir.</p></div>
+<div class="rv"><div class="n">03</div><h4>Elección a tu medida</h4><p>Te proponemos opciones para el día, la noche o una ocasión especial.</p></div>
+<div class="rv"><div class="n">04</div><h4>Siempre en contacto</h4><p>Por WhatsApp te enviamos el catálogo, novedades y te ayudamos a separar tu fragancia.</p></div>
+</div>
+</div></section>
+
+<!-- 06 LA COLECCIÓN (mostrario: fotos propias del cliente, datos en el arreglo PRODUCTS) -->
+<section class="night" id="coleccion">
+<span class="orb" style="width:500px;height:500px;background:#1b2f6b;top:4%;right:-220px"></span>
+<span class="orb" style="width:420px;height:420px;background:#3b2a12;top:46%;left:-200px"></span>
+<div class="wrap">
+<div class="sh rv"><div class="num">06</div><h2>La <span class="goldtxt">Colección</span></h2><span class="lbl">Un mostrario de la casa</span></div>
+<p class="intro rv">Una selección de las fragancias que te esperan en PARDO. Abre cada una para conocer sus notas, su duración y el mejor momento para llevarla. El catálogo completo te lo enviamos por WhatsApp.</p>
+
+<div class="quiz rv" id="quiz">
+<div class="qh"><h3>Encuentra tu perfume <em>en tres preguntas</em></h3><span class="lbl">Asesor PARDO</span></div>
+<div class="qs">
+<fieldset><legend><span>i.</span>¿Para quién es?</legend><div class="chips">
+<label><input type="radio" name="q1" value="Ella"><span>Ella</span></label>
+<label><input type="radio" name="q1" value="Él"><span>Él</span></label>
+<label><input type="radio" name="q1" value="*"><span>Me da igual</span></label>
+</div></fieldset>
+<fieldset><legend><span>ii.</span>¿Cuándo la usarás?</legend><div class="chips">
+<label><input type="radio" name="q2" value="d"><span>De día</span></label>
+<label><input type="radio" name="q2" value="n"><span>De noche</span></label>
+</div></fieldset>
+<fieldset><legend><span>iii.</span>¿Qué estilo te gusta?</legend><div class="chips">
+<label><input type="radio" name="q3" value="fresco"><span>Fresco</span></label>
+<label><input type="radio" name="q3" value="floral"><span>Floral</span></label>
+<label><input type="radio" name="q3" value="dulce"><span>Dulce</span></label>
+<label><input type="radio" name="q3" value="intenso"><span>Intenso</span></label>
+</div></fieldset>
+</div>
+<div class="qres" id="qres" hidden aria-live="polite"></div>
+</div>
+
+<div class="filters rv" role="search" aria-label="Filtrar la colección">
+<div class="chips" id="fg" role="radiogroup" aria-label="Filtrar por género">
+<label><input type="radio" name="fg" value="" checked><span>Todos</span></label>
+<label><input type="radio" name="fg" value="Ella"><span>Ella</span></label>
+<label><input type="radio" name="fg" value="Él"><span>Él</span></label>
+<label><input type="radio" name="fg" value="Unisex"><span>Unisex</span></label>
+</div>
+<div class="fsel">
+<label class="sr" for="ff">Familia olfativa</label><select id="ff"><option value="">Todas las familias</option></select>
+<label class="sr" for="fh">Casa</label><select id="fh"><option value="">Todas las casas</option></select>
+<label class="sr" for="fq">Buscar</label><input id="fq" type="search" placeholder="Buscar fragancia o nota…" autocomplete="off">
+</div>
+</div>
+<p class="count" id="count" aria-live="polite"></p>
+<div class="grid" id="grid"></div>
+<div class="more-cta rv"><a class="pill ghost" href="#catalogo">Ver más fragancias en el catálogo</a></div>
+</div>
+</section>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sTitle">
+<button class="x" id="sClose" aria-label="Cerrar ficha">✕</button>
+<div class="in2">
+<div class="pic"><img id="sImg" src="" alt=""></div>
+<div class="bd">
+<small class="lbl" id="sHouse"></small>
+<h3 id="sTitle"></h3>
+<p class="meta" id="sMeta"></p>
+<p class="desc" id="sDesc"></p>
+<div class="nt">
+<div><b>Salida</b><span id="sTop"></span></div>
+<div><b>Corazón</b><span id="sHeart"></span></div>
+<div><b>Fondo</b><span id="sBase"></span></div>
+</div>
+<div class="bars">
+<div><b>Duración</b><div class="dots" id="sDur"></div></div>
+<div><b>Proyección</b><div class="dots" id="sProj"></div></div>
+<div><b>Momento</b><span id="sMom"></span></div>
+<div><b>Temporada</b><span id="sSea"></span></div>
+</div>
+<div class="acts2">
+<a class="pill" id="sWa" href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Consultar por WhatsApp</a>
+<div class="nav2"><button id="sPrev" aria-label="Fragancia anterior">←</button><button id="sNext" aria-label="Fragancia siguiente">→</button></div>
+</div>
+<p class="fine">Disponibilidad y presentaciones por WhatsApp. Duración y proyección son una referencia general: cada piel lleva el perfume a su manera.</p>
+</div>
+</div>
+</dialog>
+
+<!-- CATÁLOGO POR WHATSAPP -->
+<section class="cat" id="catalogo">
+<div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="c">
+<img class="iso rv" src="img/isotipo-p.png" alt="">
+<div class="lbl rv">El catálogo completo</div>
+<h2 class="rv">Esto es solo una muestra. <span class="goldtxt">Todo el catálogo, a tu WhatsApp</span></h2>
+<p class="rv">Pídenos el catálogo actualizado con todas las referencias, presentaciones y disponibilidad. Te lo enviamos al instante.</p>
+<div class="opts rv">
+<a class="pill" data-wa="Hola PARDO, quiero recibir el catálogo completo." href="#"><svg><use href="#i-wa"/></svg>Recibir catálogo</a>
+<a class="pill ghost" data-wa="Hola PARDO, quiero el catálogo de fragancias para ella." href="#">Solo Ella</a>
+<a class="pill ghost" data-wa="Hola PARDO, quiero el catálogo de fragancias para él." href="#">Solo Él</a>
+</div>
+</div>
+</section>
+
+<!-- 06 PREGUNTAS -->
+<section class="ivory" id="preguntas"><div class="wrap">
+<div class="sh rv"><div class="num">07</div><h2>Preguntas <em>frecuentes</em></h2><span class="lbl">Lo que más nos consultan</span></div>
+<div class="faq rv">
+<details open><summary>¿Las fragancias son originales?</summary><p>Sí. En PARDO trabajamos únicamente con perfumes originales de cada casa de perfumería.</p></details>
+<details><summary>¿Cómo recibo el catálogo?</summary><p>Escríbenos por WhatsApp al 314 506 5421 y te enviamos el catálogo actualizado con referencias y disponibilidad.</p></details>
+<details><summary>¿Puedo probar la fragancia antes de comprarla?</summary><p>Claro. En nuestros locales 122 – 123 del Centro Comercial Manzana 12 puedes probarla sobre tu piel con la ayuda de un asesor.</p></details>
+<details><summary>¿Cuál es la diferencia entre Eau de Toilette y Eau de Parfum?</summary><p>La concentración. El Eau de Parfum tiene más esencia, por lo que suele durar más y sentirse más intenso; el Eau de Toilette es más ligero y fresco.</p></details>
+<details><summary>¿Cómo hago que mi perfume dure más?</summary><p>Aplícalo sobre la piel hidratada, en puntos de pulso como muñecas y cuello, y evita frotarlo. Guárdalo lejos del sol y del calor.</p></details>
+<details><summary>¿Me ayudan a elegir un regalo?</summary><p>Con gusto. Cuéntanos para quién es, su estilo y la ocasión, y te recomendamos las mejores opciones.</p></details>
+</div>
+</div></section>
+
+<div class="quote">
+<img class="bigp" src="img/isotipo-p.png" alt="" aria-hidden="true">
+<img class="iso rv" src="img/isotipo-p.png" alt="">
+<blockquote class="rv">“Un perfume es la forma más elegante de ser recordado.”</blockquote>
+<div class="lbl rv">PARDO · La Mansión de los Perfumes</div>
+</div>
+
+<!-- 07 VISÍTANOS -->
+<section class="ivory" id="visitanos"><div class="wrap">
+<div class="sh rv"><div class="num">08</div><h2>Visíta<em>nos</em></h2><span class="lbl">San Victorino · Bogotá</span></div>
+<div class="visit rv">
+<div class="info">
+<div class="lbl">PARDO · La Mansión de los Perfumes</div>
+<h3>Centro Comercial<br><em>Manzana 12</em></h3>
+<div class="row"><svg><use href="#i-pin"/></svg><div><b>Dirección</b><span>Calle 12 # 13-85<br>C.C. Manzana 12 · Locales 122 – 123<br>San Victorino, Bogotá</span></div></div>
+<div class="row"><svg><use href="#i-phone"/></svg><div><b>Celular / WhatsApp</b><a href="tel:+573145065421">314 506 5421</a></div></div>
+<div class="row"><svg><use href="#i-store"/></svg><div><b>Horario</b><span>Escríbenos para confirmar el horario de atención</span></div></div>
+<div class="acts">
+<a class="pill" id="dir" href="#" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg>Cómo llegar</a>
+<a class="pill ghost" data-wa="Hola PARDO, quiero visitarlos. ¿Me confirman su horario?" href="#"><svg><use href="#i-wa"/></svg>Escríbenos</a>
+<a class="pill ghost" href="tel:+573145065421"><svg><use href="#i-phone"/></svg>Llamar</a>
+</div>
+</div>
+<div class="map"><iframe id="map" title="Mapa de ubicación de PARDO en San Victorino, Bogotá" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div>
+</div></section>
+</main>
+
+<footer>
+<img class="lg" src="img/logo-secundario.png" alt="PARDO · La Mansión de los Perfumes">
+<ul><li><a href="#mansion">La Mansión</a></li><li><a href="#salones">Salones</a></li><li><a href="#guia">Guía olfativa</a></li><li><a href="#coleccion">Colección</a></li><li><a href="#catalogo">Catálogo</a></li><li><a href="#visitanos">Visítanos</a></li></ul>
+<address>Calle 12 # 13-85 · C.C. Manzana 12 · Locales 122 – 123 · San Victorino, Bogotá<br><a href="tel:+573145065421">314 506 5421</a></address>
+<small>© <span id="yr">2026</span> PARDO · La Mansión de los Perfumes. Las marcas mencionadas pertenecen a sus respectivos propietarios.</small>
+</footer>
+
+<a class="wa" data-wa="Hola PARDO, quiero información sobre sus perfumes." href="#" aria-label="Escríbenos por WhatsApp"><span class="tx">Escríbenos</span><span class="ic"><svg><use href="#i-wa"/></svg></span></a>
+
+<script>
+// ===== Datos de la tienda =====
+const WA = '573145065421';
+const ADDRESS = 'Calle 12 # 13-85, Centro Comercial Manzana 12, San Victorino, Bogotá, Colombia';
+const wa = t => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+
+document.querySelectorAll('[data-wa]').forEach(a => { a.href = wa(a.dataset.wa); a.target = '_blank'; a.rel = 'noopener'; });
+document.getElementById('map').src = 'https://maps.google.com/maps?q=' + encodeURIComponent(ADDRESS) + '&z=17&output=embed';
+document.getElementById('dir').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(ADDRESS);
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ===== Rueda olfativa (SVG) + acordeón sincronizados =====
+const FAM = [['Florales','#e6d2a8','#3a2d18'],['Amaderados','#8a6b3f','#f5f0e8'],['Orientales','#161412','#d9c29a'],['Frescos','#c9b48a','#2b2112']];
+const svg = document.getElementById('wheelSvg'), NS = 'http://www.w3.org/2000/svg', C = 250, R1 = 240, R0 = 95;
+const pt = (r, a) => [C + r * Math.cos(a), C + r * Math.sin(a)];
+FAM.forEach((f, i) => {
+  const a0 = -Math.PI / 2 + i * Math.PI / 2 + 0.02, a1 = a0 + Math.PI / 2 - 0.04;
+  const [x0, y0] = pt(R1, a0), [x1, y1] = pt(R1, a1), [x2, y2] = pt(R0, a1), [x3, y3] = pt(R0, a0);
+  const p = document.createElementNS(NS, 'path');
+  p.setAttribute('d', `M${x0} ${y0}A${R1} ${R1} 0 0 1 ${x1} ${y1}L${x2} ${y2}A${R0} ${R0} 0 0 0 ${x3} ${y3}Z`);
+  p.setAttribute('fill', f[1]); p.setAttribute('class', 'seg' + (i ? '' : ' on')); p.dataset.i = i;
+  p.addEventListener('click', () => openFam(i));
+  svg.appendChild(p);
+  const am = (a0 + a1) / 2, [tx, ty] = pt((R0 + R1) / 2, am);
+  const t = document.createElementNS(NS, 'text');
+  t.setAttribute('x', tx); t.setAttribute('y', ty + 7); t.setAttribute('text-anchor', 'middle'); t.setAttribute('fill', f[2]); t.setAttribute('class', 't');
+  t.textContent = f[0]; svg.appendChild(t);
+});
+const items = document.querySelectorAll('#acc .item'), segs = svg.querySelectorAll('.seg');
+function openFam(i){
+  items.forEach((o, k) => { o.classList.toggle('open', k === i); o.querySelector('button').setAttribute('aria-expanded', k === i); });
+  segs.forEach((s, k) => s.classList.toggle('on', k === i));
+}
+items.forEach((it, i) => it.querySelector('button').onclick = () => openFam(i));
+
+// ===== 06 La Colección: mostrario (fotos propias del cliente en img/coleccion/) =====
+// Notas tomadas de información pública (Fragrantica y sitios de las casas). Sin precios: todo se consulta por WhatsApp.
+// g: Ella | Él | Unisex · fam: Florales | Amaderados | Orientales | Frescos (las mismas de la Guía olfativa)
+// dur / proj: 1 a 5 · m: momentos (d = día, n = noche) · s: estilos para el quiz
+const PRODUCTS = [
+  { id:'9pm', house:'Afnan', name:'9pm', conc:'Eau de Parfum', ml:'150 ml', g:'Él', fam:'Orientales', sub:'Oriental vainilla',
+    desc:'Dulce y especiado, con una estela de vainilla que se queda en la memoria. Hecho para la noche.',
+    top:'Manzana, canela, lavanda silvestre, bergamota', heart:'Flor de azahar, lirio de los valles', base:'Vainilla, haba tonka, ámbar, pachulí',
+    dur:4, proj:4, mom:'Noche', sea:'Otoño · Invierno', m:['n'], s:['dulce','intenso'] },
+  { id:'9pm-femme', house:'Afnan', name:'9pm Pour Femme', conc:'Eau de Parfum', ml:'100 ml', g:'Ella', fam:'Florales', sub:'Floral oriental',
+    desc:'Fruta jugosa sobre un ramo de rosa e iris, con un fondo amaderado que le da carácter.',
+    top:'Frambuesa, violeta, manzana, naranja', heart:'Rosa, peonía, iris, jazmín', base:'Ciprés, pino, cedro, ámbar',
+    dur:4, proj:3, mom:'Tarde y noche', sea:'Otoño · Primavera', m:['n'], s:['floral','dulce'] },
+  { id:'cdn-intense', house:'Armaf', name:'Club de Nuit Intense Man', conc:'Eau de Parfum', ml:'200 ml', g:'Él', fam:'Amaderados', sub:'Amaderado especiado',
+    desc:'Piña, limón y abedul ahumado. Un clásico moderno con presencia de sobra.',
+    top:'Limón, piña, bergamota, grosella negra, manzana', heart:'Abedul, jazmín, rosa', base:'Almizcle, ámbar gris, pachulí, vainilla',
+    dur:5, proj:5, mom:'Día y noche', sea:'Todo el año', m:['d','n'], s:['intenso'] },
+  { id:'cdn-oud', house:'Armaf', name:'Club de Nuit Oud', conc:'Parfum', ml:'105 ml', g:'Unisex', fam:'Amaderados', sub:'Frutal amaderado con oud',
+    desc:'Frutas doradas que se funden en oud y vainilla. Opulento, para él o para ella.',
+    top:'Melocotón, maracuyá, pera, piña, ciruela, bergamota', heart:'Madera de cachemira, jazmín, hoja de violeta, fresia', base:'Almizcle, oud de Camboya, vainilla, ámbar',
+    dur:5, proj:4, mom:'Noche', sea:'Otoño · Invierno', m:['n'], s:['intenso','dulce'] },
+  { id:'asad', house:'Lattafa', name:'Asad', conc:'Eau de Parfum', ml:'100 ml', g:'Él', fam:'Orientales', sub:'Oriental especiado',
+    desc:'Pimienta, tabaco y café sobre un fondo de vainilla y ámbar. Cálido y seguro de sí.',
+    top:'Pimienta negra, tabaco, piña', heart:'Pachulí, café, iris', base:'Vainilla, ámbar, maderas secas, benjuí, láudano',
+    dur:5, proj:4, mom:'Noche', sea:'Otoño · Invierno', m:['n'], s:['intenso','dulce'] },
+  { id:'yara', house:'Lattafa', name:'Yara', conc:'Eau de Parfum', ml:'100 ml', g:'Ella', fam:'Orientales', sub:'Oriental vainilla',
+    desc:'Cremoso y dulce, como un postre de vainilla y frutas tropicales. Suave, femenino y adictivo.',
+    top:'Orquídea, heliotropo, mandarina', heart:'Acorde gourmand, frutas tropicales', base:'Vainilla, almizcle, sándalo',
+    dur:4, proj:3, mom:'Día y noche', sea:'Todo el año', m:['d','n'], s:['dulce'] },
+  { id:'delilah', house:'Maison Alhambra', name:'Delilah Pour Femme', conc:'Eau de Parfum', ml:'100 ml', g:'Ella', fam:'Florales', sub:'Floral frutal',
+    desc:'Una rosa fresca y frutal, luminosa y elegante. Para el día y los eventos especiales.',
+    top:'Ruibarbo, lichi, bergamota', heart:'Rosa turca, peonía, lirio', base:'Almizcle blanco, cashmeran, vainilla',
+    dur:3, proj:3, mom:'Día', sea:'Primavera · Verano', m:['d'], s:['floral','fresco'] },
+  { id:'voyage', house:'Nautica', name:'Voyage', conc:'Eau de Toilette', ml:'100 ml', g:'Él', fam:'Frescos', sub:'Amaderado acuático',
+    desc:'Manzana verde y brisa marina. Limpio, ligero y fácil de llevar a diario.',
+    top:'Hojas verdes, manzana', heart:'Loto, mimosa', base:'Almizcle, cedro, musgo de roble, ámbar',
+    dur:3, proj:3, mom:'Día', sea:'Primavera · Verano', m:['d'], s:['fresco'] },
+  { id:'nitro-red', house:'Dumont', name:'Nitro Red', conc:'Eau de Parfum', ml:'100 ml', g:'Él', fam:'Frescos', sub:'Fougère frutal',
+    desc:'Manzana y lavanda con un toque jugoso de sandía. Juvenil, dulce y llamativo.',
+    top:'Manzana, lavanda, bergamota', heart:'Sandía, cedro, cálamo', base:'Ámbar, sándalo, pachulí',
+    dur:4, proj:4, mom:'Día y noche', sea:'Primavera · Verano', m:['d','n'], s:['fresco','dulce'] },
+  { id:'hawas', house:'Rasasi', name:'Hawas for Him', conc:'Eau de Parfum', ml:'100 ml', g:'Él', fam:'Frescos', sub:'Aromático acuático',
+    desc:'Frescura acuática con un dulzor frutal que se nota a distancia. Ideal para el calor.',
+    top:'Manzana, bergamota, limón, canela', heart:'Notas acuáticas, ciruela, azahar, cardamomo', base:'Ámbar gris, almizcle, pachulí, madera flotante',
+    dur:4, proj:5, mom:'Día y noche', sea:'Primavera · Verano', m:['d','n'], s:['fresco','intenso'] },
+  { id:'hawas-diva', house:'Rasasi', name:'Hawas Diva', conc:'Eau de Parfum', ml:'100 ml', g:'Ella', fam:'Florales', sub:'Floral oriental',
+    desc:'Rosa y frutos rojos con un toque de incienso. Femenina, segura y con estela.',
+    top:'Frutos rojos, ruibarbo, lichi', heart:'Rosa, incienso, cedro', base:'Vainilla, almizcle, ámbar gris',
+    dur:4, proj:4, mom:'Tarde y noche', sea:'Todo el año', m:['n'], s:['floral','intenso'] },
+  { id:'hawas-kobra', house:'Rasasi', name:'Hawas Kobra', conc:'Eau de Parfum', ml:'100 ml', g:'Él', fam:'Amaderados', sub:'Amaderado cítrico',
+    desc:'Jengibre, mandarina y té verde. Energía fresca sobre un fondo amaderado.',
+    top:'Jengibre, bergamota, mandarina', heart:'Té verde, neroli, canela', base:'Almizcle, maderas, ámbar',
+    dur:4, proj:4, mom:'Día', sea:'Primavera · Verano', m:['d'], s:['fresco'] }
+];
+const fullName = p => `${p.house} ${p.name} ${p.conc} ${p.ml}`;
+const waMsg = p => `Hola PARDO, quiero consultar por el perfume ${fullName(p)}. ¿Lo tienen disponible?`;
+const imgAlt = p => `${p.house} ${p.name}: frasco y caja sobre mármol en PARDO`;
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]));
+const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+// Tarjetas
+const grid = document.getElementById('grid');
+grid.innerHTML = PRODUCTS.map((p, i) => `
+<article class="prod" data-i="${i}">
+<button class="open" type="button" aria-haspopup="dialog" aria-label="Ver ficha de ${esc(p.house + ' ' + p.name)}">
+<div class="ph"><img src="img/coleccion/${p.id}-t.jpg" alt="${esc(imgAlt(p))}" width="560" height="560" loading="lazy" decoding="async"><span class="g">${p.g}</span></div>
+<div class="tx"><small>${esc(p.house)}</small><h3>${esc(p.name)}</h3><div class="meta">${esc(p.sub)} · ${p.ml}</div></div>
+</button>
+<div class="ft"><span class="more" aria-hidden="true">Ver ficha</span><a href="${wa(waMsg(p))}" target="_blank" rel="noopener" aria-label="Consultar ${esc(p.house + ' ' + p.name)} por WhatsApp"><svg><use href="#i-wa"/></svg></a></div>
+</article>`).join('') + '<p class="empty" id="empty" hidden><b>Sin coincidencias</b>Prueba otro filtro o pídenos la referencia por WhatsApp.</p>';
+const cards = [...grid.querySelectorAll('.prod')];
+cards.forEach(c => c.querySelector('.open').addEventListener('click', () => openSheet(+c.dataset.i)));
+
+// Filtros
+const ff = document.getElementById('ff'), fh = document.getElementById('fh'), fq = document.getElementById('fq'), count = document.getElementById('count');
+[...new Set(PRODUCTS.map(p => p.fam))].sort().forEach(v => ff.add(new Option(v, v)));
+[...new Set(PRODUCTS.map(p => p.house))].sort().forEach(v => fh.add(new Option(v, v)));
+let visible = PRODUCTS.map((_, i) => i);
+function applyFilters(){
+  const g = document.querySelector('input[name="fg"]:checked').value, f = ff.value, h = fh.value, q = norm(fq.value.trim());
+  visible = [];
+  PRODUCTS.forEach((p, i) => {
+    const hay = norm([p.house, p.name, p.sub, p.fam, p.top, p.heart, p.base].join(' '));
+    const ok = (!g || p.g === g) && (!f || p.fam === f) && (!h || p.house === h) && (!q || hay.includes(q));
+    cards[i].hidden = !ok; if (ok) visible.push(i);
+  });
+  document.getElementById('empty').hidden = visible.length > 0;
+  count.textContent = visible.length === 1 ? '1 fragancia' : `${visible.length} fragancias`;
+}
+document.querySelectorAll('input[name="fg"]').forEach(r => r.addEventListener('change', applyFilters));
+[ff, fh].forEach(s => s.addEventListener('change', applyFilters));
+fq.addEventListener('input', applyFilters);
+applyFilters();
+
+// Ficha (modal <dialog>)
+const sheet = document.getElementById('sheet'), $ = id => document.getElementById(id);
+let cur = 0;
+const dots = n => Array.from({ length: 5 }, (_, k) => `<i class="${k < n ? 'on' : ''}"></i>`).join('');
+function fillSheet(i){
+  const p = PRODUCTS[i]; cur = i;
+  $('sImg').src = `img/coleccion/${p.id}.jpg`; $('sImg').alt = imgAlt(p);
+  $('sHouse').textContent = p.house; $('sTitle').textContent = p.name;
+  $('sMeta').innerHTML = `<b>${p.conc}</b> · ${p.ml} · ${p.g} · ${esc(p.sub)}`;
+  $('sDesc').textContent = p.desc;
+  $('sTop').textContent = p.top; $('sHeart').textContent = p.heart; $('sBase').textContent = p.base;
+  $('sDur').innerHTML = dots(p.dur); $('sDur').setAttribute('aria-label', `Duración ${p.dur} de 5`); $('sDur').setAttribute('role', 'img');
+  $('sProj').innerHTML = dots(p.proj); $('sProj').setAttribute('aria-label', `Proyección ${p.proj} de 5`); $('sProj').setAttribute('role', 'img');
+  $('sMom').textContent = p.mom; $('sSea').textContent = p.sea;
+  $('sWa').href = wa(waMsg(p));
+}
+function openSheet(i){ fillSheet(i); if (!sheet.open) sheet.showModal(); $('sClose').focus(); }
+function step(d){
+  const list = visible.includes(cur) ? visible : PRODUCTS.map((_, k) => k);
+  fillSheet(list[(list.indexOf(cur) + d + list.length) % list.length]);
+}
+$('sClose').onclick = () => sheet.close();
+$('sPrev').onclick = () => step(-1); $('sNext').onclick = () => step(1);
+sheet.addEventListener('click', e => { if (e.target === sheet) sheet.close(); });
+sheet.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
+sheet.addEventListener('close', () => { const c = cards[cur]; if (c && !c.hidden) c.querySelector('.open').focus(); });
+
+// Quiz "Encuentra tu perfume"
+const qres = $('qres');
+document.querySelectorAll('#quiz input').forEach(r => r.addEventListener('change', () => {
+  const v = n => (document.querySelector(`#quiz input[name="${n}"]:checked`) || {}).value;
+  const g = v('q1'), m = v('q2'), s = v('q3');
+  if (!g || !m || !s) return;
+  const picks = PRODUCTS.map((p, i) => ({ p, i,
+      sc: (p.s[0] === s ? 4 : p.s.includes(s) ? 3 : 0) + (p.m.includes(m) ? 2 : 0) + (p.g === g ? 1 : 0) }))
+    .filter(o => g === '*' || o.p.g === g || o.p.g === 'Unisex')
+    .sort((a, b) => b.sc - a.sc).slice(0, 3);
+  qres.innerHTML = `<p>Te sugerimos empezar por estas fragancias. Ábrelas para ver su ficha o pídenos más opciones por WhatsApp.</p><div class="mini">${
+    picks.map(o => `<button type="button" data-i="${o.i}"><img src="img/coleccion/${o.p.id}-t.jpg" alt=""><span><small>${esc(o.p.house)}</small><b>${esc(o.p.name)}</b><i>${esc(o.p.sub)} · ${o.p.mom}</i></span></button>`).join('')
+  }</div>`;
+  qres.hidden = false;
+  qres.querySelectorAll('button').forEach(b => b.onclick = () => openSheet(+b.dataset.i));
+}));
+
+// ===== Menú móvil =====
+const menu = document.getElementById('menu'), links = document.getElementById('links');
+menu.onclick = () => { const o = links.classList.toggle('open'); menu.setAttribute('aria-expanded', o); menu.textContent = o ? '✕' : '☰'; };
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); menu.setAttribute('aria-expanded', false); menu.textContent = '☰'; }));
+
+// ===== Brillo que sigue al cursor =====
+const glow = document.getElementById('glow');
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!still) addEventListener('mousemove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+
+// ===== Scroll: nav y aparición =====
+const nav = document.getElementById('nav'), ivs = document.querySelectorAll('.ivory');
+addEventListener('scroll', () => {
+  nav.classList.toggle('on-ivory', [...ivs].some(s => { const r = s.getBoundingClientRect(); return r.top < 60 && r.bottom > 60; }));
+}, { passive: true });
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+const hide = () => document.getElementById('loader').classList.add('hide');
+addEventListener('load', hide); setTimeout(hide, 3500);
+</script>
+</body>
+</html>
